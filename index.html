@@ -145,6 +145,28 @@ a{color:inherit;text-decoration:none} button,input,select,textarea{font:inherit}
 .resultsCta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:30px;padding:26px 30px;border-radius:22px;background:#0b1733;color:#fff}
 .resultsCta p{margin:0;color:#c3d0e2;font-size:16px}
 .resultsCta strong{display:block;color:#fff;font-size:20px;margin-bottom:3px}
+
+.firstMonthIntro{display:flex;align-items:end;justify-content:space-between;gap:28px;margin:6px 0 18px}
+.firstMonthIntro h3{font-size:26px;letter-spacing:-.03em;margin:0}
+.firstMonthIntro p{margin:0;color:#66798f;max-width:620px}
+.firstMonthGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:24px}
+.firstMonthCard{background:#fff;border:1px solid #d9e4f0;border-radius:26px;padding:28px;box-shadow:0 14px 38px rgba(18,38,78,.055)}
+.firstMonthCard:nth-child(2){background:#0b1733;color:#fff;border-color:#0b1733}
+.firstMonthCard:nth-child(2) .casePeriod,.firstMonthCard:nth-child(2) .miniResultLabel,.firstMonthCard:nth-child(2) .miniResultNote{color:#aabbd0}
+.firstMonthCard:nth-child(2) .casePill{background:rgba(255,255,255,.11);color:#d7e4f5}
+.firstMonthCard h3{font-size:28px;line-height:1.05;letter-spacing:-.04em;margin:0 0 22px}
+.miniResults{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.miniResult{padding:16px;border-radius:18px;background:#f5f8fc;border:1px solid #e0e8f2}
+.firstMonthCard:nth-child(2) .miniResult{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.11)}
+.miniResultLabel{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.09em;font-weight:850;color:#71839a;margin-bottom:8px}
+.miniResultValue{display:block;font-size:30px;line-height:1;font-weight:950;letter-spacing:-.05em;color:#102746}
+.firstMonthCard:nth-child(2) .miniResultValue{color:#fff}
+.miniResultNote{display:block;font-size:12px;color:#71839a;margin-top:8px;line-height:1.3}
+.continuousCase{margin-top:2px}
+.continuousCase .caseStats{grid-template-columns:repeat(4,1fr)}
+@media (max-width:900px){.firstMonthGrid{grid-template-columns:1fr}.continuousCase .caseStats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.miniResults{grid-template-columns:1fr 1fr}.miniResult:last-child{grid-column:1/-1}.firstMonthIntro{display:block}.firstMonthIntro p{margin-top:8px}}
+
 .profilePhoto{width:100%;max-width:440px;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;border-radius:28px;box-shadow:var(--shadow);display:block}
 @media (max-width:860px){.realCase{grid-template-columns:1fr;padding:28px;gap:28px}.resultsCta{align-items:flex-start;flex-direction:column}.profilePhoto{max-width:560px;margin:auto}}
 @media (max-width:560px){.caseStats{grid-template-columns:1fr 1fr;gap:10px}.caseStat{min-height:126px;padding:17px}.caseStat .statValue{font-size:32px}.realCase{padding:22px;border-radius:24px}.resultsReal .sectionHeader p{font-size:17px}}
@@ -213,39 +235,71 @@ footer{padding:26px 0 38px;color:#5d6f87}.footerIn{display:flex;justify-content:
   <div class="sectionHeader">
     <span class="eyebrow">Resultados reales</span>
     <h2>Marcas que ya venden, ahora convierten mejor su mismo tráfico.</h2>
-    <p>Resultados documentados de proyectos reales, presentados de forma anónima para proteger la información de cada marca.</p>
+    <p>Crecimiento medible en ventas, conversión y valor promedio del pedido, desde el primer mes y a lo largo de procesos continuos de optimización.</p>
   </div>
-  <div class="realCases">
-    <article class="realCase dark">
-      <div>
-        <div class="caseMeta"><span class="casePill">Caso real · Ecommerce</span><span class="casePeriod">Marzo → noviembre</span></div>
-        <h3>Crecimiento documentado de una operación ecommerce.</h3>
-        <p class="realCaseCopy">Durante este periodo trabajé sobre crecimiento, eficiencia de adquisición y valor del pedido, usando los datos del negocio para detectar oportunidades y priorizar las siguientes acciones.</p>
-        <div class="caseWork"><strong>En qué trabajé</strong><p>Lectura de performance, priorización comercial, eficiencia de adquisición y evolución del ticket para sostener el crecimiento del canal.</p></div>
-      </div>
-      <div class="caseStats">
-        <div class="caseStat accent"><span class="statLabel">Facturación</span><span class="statValue">+2,112%</span><span class="statNote">$2,916 → $64,515 MXN</span></div>
-        <div class="caseStat"><span class="statLabel">Compras</span><span class="statValue">+1,586%</span><span class="statNote">7 → 118 compras</span></div>
-        <div class="caseStat"><span class="statLabel">CPA</span><span class="statValue">−88.7%</span><span class="statNote">$4,255 → $479 MXN</span></div>
-        <div class="caseStat"><span class="statLabel">AOV</span><span class="statValue">+46.5%</span><span class="statNote">$373 → $546 MXN</span></div>
+
+  <div class="firstMonthIntro">
+    <h3>Resultados desde el primer mes</h3>
+    <p>Una muestra de cómo distintas categorías respondieron durante el primer mes de trabajo.</p>
+  </div>
+
+  <div class="firstMonthGrid">
+    <article class="firstMonthCard">
+      <div class="caseMeta"><span class="casePill">Joyería</span><span class="casePeriod">Primer mes de trabajo</span></div>
+      <h3>Más ventas con una experiencia de compra mejor resuelta.</h3>
+      <div class="miniResults">
+        <div class="miniResult"><span class="miniResultLabel">Ventas</span><span class="miniResultValue">+36%</span><span class="miniResultNote">$1.16M MXN</span></div>
+        <div class="miniResult"><span class="miniResultLabel">Conversión</span><span class="miniResultValue">+6%</span><span class="miniResultNote">0.95%</span></div>
+        <div class="miniResult"><span class="miniResultLabel">AOV</span><span class="miniResultValue">+1%</span><span class="miniResultNote">$1,453.62 MXN</span></div>
       </div>
     </article>
 
-    <article class="realCase light">
-      <div>
-        <div class="caseMeta"><span class="casePill">Caso real · Shopify + CRO</span><span class="casePeriod">30 días vs. 30 días anteriores</span></div>
-        <h3>Un rediseño enfocado en vender, no solo en verse mejor.</h3>
-        <p class="realCaseCopy">La tienda tenía un buen producto, pero la experiencia no comunicaba todo su valor. Se reorganizó la navegación y la información para hacer más clara la decisión de compra.</p>
-        <div class="caseWork"><strong>Qué hicimos</strong><p>Homepage, páginas de producto y colecciones, jerarquía de beneficios, diferenciadores, prueba social, storytelling, bundles y mensajes de valor.</p></div>
+    <article class="firstMonthCard">
+      <div class="caseMeta"><span class="casePill">Suplementos</span><span class="casePeriod">Primer mes de trabajo</span></div>
+      <h3>Mejor conversión y crecimiento comercial desde el arranque.</h3>
+      <div class="miniResults">
+        <div class="miniResult"><span class="miniResultLabel">Ventas</span><span class="miniResultValue">+88%</span><span class="miniResultNote">$139,130 MXN</span></div>
+        <div class="miniResult"><span class="miniResultLabel">Conversión</span><span class="miniResultValue">+20%</span><span class="miniResultNote">1.00%</span></div>
+        <div class="miniResult"><span class="miniResultLabel">AOV</span><span class="miniResultValue">+6%</span><span class="miniResultNote">$853.76 MXN</span></div>
       </div>
-      <div class="caseStats">
-        <div class="caseStat"><span class="statLabel">Ventas</span><span class="statValue">+232%</span><span class="statNote">$700,629 MXN en el periodo</span></div>
-        <div class="caseStat accent"><span class="statLabel">Conversión</span><span class="statValue">+91%</span><span class="statNote">1.52% de conversión</span></div>
-        <div class="caseStat"><span class="statLabel">Pedidos</span><span class="statValue">+158%</span><span class="statNote">1,085 pedidos</span></div>
-        <div class="caseStat"><span class="statLabel">AOV</span><span class="statValue">+38%</span><span class="statNote">$620.41 MXN</span></div>
+    </article>
+
+    <article class="firstMonthCard">
+      <div class="caseMeta"><span class="casePill">Alimentos saludables</span><span class="casePeriod">Primer mes de trabajo</span></div>
+      <h3>Crecimiento en ventas mientras se sostiene el valor del pedido.</h3>
+      <div class="miniResults">
+        <div class="miniResult"><span class="miniResultLabel">Ventas</span><span class="miniResultValue">+30%</span><span class="miniResultNote">$1.06M MXN</span></div>
+        <div class="miniResult"><span class="miniResultLabel">Conversión</span><span class="miniResultValue">+1.5%</span><span class="miniResultNote">1.49%</span></div>
+        <div class="miniResult"><span class="miniResultLabel">AOV</span><span class="miniResultValue">+0.6%</span><span class="miniResultNote">$1,600.44 MXN</span></div>
+      </div>
+    </article>
+
+    <article class="firstMonthCard">
+      <div class="caseMeta"><span class="casePill">Gorras</span><span class="casePeriod">Primer mes de trabajo</span></div>
+      <h3>Una mejora fuerte en conversión sobre una base comercial pequeña.</h3>
+      <div class="miniResults">
+        <div class="miniResult"><span class="miniResultLabel">Ventas</span><span class="miniResultValue">+111%</span><span class="miniResultNote">USD 1,472.79</span></div>
+        <div class="miniResult"><span class="miniResultLabel">Conversión</span><span class="miniResultValue">+485%</span><span class="miniResultNote">0.81%</span></div>
+        <div class="miniResult"><span class="miniResultLabel">AOV</span><span class="miniResultValue">+23%</span><span class="miniResultNote">USD 61.02</span></div>
       </div>
     </article>
   </div>
+
+  <article class="realCase dark continuousCase">
+    <div>
+      <div class="caseMeta"><span class="casePill">Suplementos</span><span class="casePeriod">9 meses continuos de trabajo</span></div>
+      <h3>El crecimiento no fue un pico: se sostuvo durante nueve meses de optimización continua.</h3>
+      <p class="realCaseCopy">La mejora se construyó mes a mes sobre conversión, valor promedio del pedido y desempeño comercial, con decisiones continuas basadas en los datos de la tienda.</p>
+      <div class="caseWork"><strong>Resultado acumulado</strong><p>Comparativa entre el inicio del proceso y el noveno mes de trabajo.</p></div>
+    </div>
+    <div class="caseStats">
+      <div class="caseStat accent"><span class="statLabel">Ventas</span><span class="statValue">+389%</span><span class="statNote">$16,183 → $79,142.59 MXN</span></div>
+      <div class="caseStat"><span class="statLabel">Conversión</span><span class="statValue">+44%</span><span class="statNote">0.59% → 0.85%</span></div>
+      <div class="caseStat"><span class="statLabel">AOV</span><span class="statValue">+35%</span><span class="statNote">$373.21 → $505.16 MXN</span></div>
+      <div class="caseStat"><span class="statLabel">Pedidos</span><span class="statValue">+233%</span><span class="statNote">42 → 140 pedidos</span></div>
+    </div>
+  </article>
+
   <div class="resultsCta"><div><strong>¿Quieres encontrar las oportunidades de tu tienda?</strong><p>Revisemos tu caso y definamos qué vale la pena priorizar.</p></div><a class="btn btnLime google-booking-link" href="#google-booking">Agendar una sesión →</a></div>
 </div></section>
 

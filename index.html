@@ -197,6 +197,106 @@ footer{padding:26px 0 38px;color:#5d6f87}.footerIn{display:flex;justify-content:
   .ctaBox{padding:28px}.modalCard{padding:22px}.hero h1{font-size:clamp(38px,12vw,64px)}
 }
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto;transition:none !important}}
+
+/* === Resultados reales v3: proof-first + responsive === */
+.proofResults{background:#f3f7fb}
+.proofResults .sectionHeader{max-width:900px;margin-bottom:28px}
+.proofResults .sectionHeader h2{max-width:820px}
+.proofResults .sectionHeader p{max-width:780px;font-size:19px;color:#556983}
+.proofMethod{
+  margin:0 0 30px;padding:18px 20px;border:1px solid #d9e4f0;border-radius:18px;
+  background:#fff;color:#53677f;font-size:15px;line-height:1.55
+}
+.proofMethod strong{color:#102746}
+.proofSubhead{display:flex;align-items:end;justify-content:space-between;gap:28px;margin:0 0 18px}
+.proofSubhead h3{font-size:28px;letter-spacing:-.035em;margin:0}
+.proofSubhead p{margin:0;color:#66798f;max-width:620px}
+.proofGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.proofCard{
+  min-width:0;background:#fff;border:1px solid #d9e4f0;border-radius:26px;padding:26px;
+  box-shadow:0 14px 38px rgba(18,38,78,.055);overflow:hidden
+}
+.proofCard.dark{background:#0b1733;color:#fff;border-color:#0b1733}
+.proofMeta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.proofPill{
+  display:inline-flex;padding:8px 11px;border-radius:999px;font-size:12px;font-weight:900;
+  letter-spacing:.05em;text-transform:uppercase;background:#eaf0f9;color:#3a5576
+}
+.proofCard.dark .proofPill{background:rgba(255,255,255,.11);color:#d8e5f6}
+.proofPeriod{font-size:13px;font-weight:800;color:#73859b}
+.proofCard.dark .proofPeriod{color:#a9bad0}
+.proofCard h3{font-size:28px;line-height:1.08;letter-spacing:-.035em;margin:0 0 18px}
+.proofMetrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.proofMetric{min-width:0;padding:15px;border-radius:17px;background:#f5f8fc;border:1px solid #e0e8f2}
+.proofCard.dark .proofMetric{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.11)}
+.proofMetric .label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.09em;font-weight:850;color:#71839a;margin-bottom:7px}
+.proofMetric .value{display:block;font-size:28px;line-height:1;font-weight:950;letter-spacing:-.045em;color:#102746}
+.proofCard.dark .proofMetric .value{color:#fff}
+.proofMetric .note{display:block;font-size:11px;color:#71839a;margin-top:7px;line-height:1.35}
+.proofCard.dark .proofMetric .label,.proofCard.dark .proofMetric .note{color:#aabbd0}
+.proofImageLink{
+  display:block;margin-top:18px;border-radius:18px;overflow:hidden;background:#fff;border:1px solid #dce5ef
+}
+.proofImage{display:block;width:100%;height:auto;aspect-ratio:700/540;object-fit:contain;background:#f4f6f8;transition:transform .2s ease}
+.proofImageLink:hover .proofImage{transform:scale(1.01)}
+.proofImageCaption{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;background:#fff;color:#60738a;font-size:12px;font-weight:700}
+.proofProcess{
+  margin-top:16px;padding-top:15px;border-top:1px solid #e1e8f1;color:#5d7189;font-size:13px;line-height:1.5
+}
+.proofProcess strong{color:#102746}
+.proofCard.dark .proofProcess{border-color:rgba(255,255,255,.13);color:#b6c6da}
+.proofCard.dark .proofProcess strong{color:#fff}
+.longProof{
+  margin-top:26px;background:linear-gradient(135deg,#08182f 0%,#143d73 100%);color:#fff;
+  border-radius:30px;padding:34px;box-shadow:0 24px 70px rgba(12,33,67,.12);overflow:hidden
+}
+.longProofHeader{max-width:860px}
+.longProof h3{font-size:clamp(32px,4vw,50px);line-height:1.04;letter-spacing:-.045em;margin:0 0 14px}
+.longProofCopy{font-size:17px;line-height:1.6;color:#c2d0e2;margin:0 0 24px;max-width:820px}
+.longProofMetrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 20px}
+.longProofMetric{min-width:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:20px}
+.longProofMetric.accent{background:#c8ff1a;border-color:#c8ff1a;color:#0b1733}
+.longProofMetric .label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.09em;font-weight:850;color:#a8bad0}
+.longProofMetric.accent .label{color:#405021}
+.longProofMetric .value{display:block;font-size:clamp(36px,4.4vw,54px);line-height:.95;font-weight:950;letter-spacing:-.05em;margin:9px 0}
+.longProofMetric .note{display:block;font-size:12px;color:#b7c7da;line-height:1.4}
+.longProofMetric.accent .note{color:#34451e}
+.longProof .proofImageLink{max-width:920px;margin:22px auto 0}
+.longProof .proofProcess{border-color:rgba(255,255,255,.13);color:#b9c9db;max-width:900px;margin-left:auto;margin-right:auto}
+.longProof .proofProcess strong{color:#fff}
+.proofResultsCta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:28px;padding:25px 28px;border-radius:22px;background:#0b1733;color:#fff}
+.proofResultsCta strong{display:block;font-size:20px;margin-bottom:3px}
+.proofResultsCta p{margin:0;color:#c3d0e2;font-size:16px}
+
+@media (max-width:980px){
+  .proofGrid{grid-template-columns:1fr 1fr}
+  .proofCard{padding:22px}
+  .proofMetrics{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .proofMetric{padding:13px 10px}
+  .proofMetric .value{font-size:24px}
+  .longProof{padding:28px}
+}
+@media (max-width:760px){
+  .proofGrid{grid-template-columns:1fr}
+  .proofSubhead{display:block}
+  .proofSubhead p{margin-top:8px}
+  .proofCard{padding:22px;border-radius:22px}
+  .proofCard h3{font-size:25px}
+  .longProof{padding:22px;border-radius:24px}
+  .longProofMetrics{grid-template-columns:1fr 1fr}
+  .proofResultsCta{align-items:flex-start;flex-direction:column}
+}
+@media (max-width:520px){
+  .proofResults .sectionHeader p{font-size:17px}
+  .proofMethod{padding:15px 16px}
+  .proofMetrics{grid-template-columns:1fr}
+  .proofMetric{padding:14px 15px}
+  .proofMetric .value{font-size:30px}
+  .longProofMetrics{grid-template-columns:1fr}
+  .longProof h3{font-size:30px}
+  .proofImageCaption{align-items:flex-start;flex-direction:column;gap:2px}
+}
+
 </style>
 </head>
 <body>
@@ -231,76 +331,101 @@ footer{padding:26px 0 38px;color:#5d6f87}.footerIn{display:flex;justify-content:
 
 <section class="section" id="servicios"><div class="container"><div class="sectionHeader"><span class="eyebrow">Servicios</span><h2>Trabajo sobre los puntos que realmente afectan conversión.</h2><p>Desde auditoría y priorización hasta implementación en Shopify y colaboración continua con marcas o agencias.</p></div><div class="services"><article class="service"><div class="serviceTop"><div><span class="eyebrow">01</span><h3>CRO & UX Audit</h3></div><div class="iconBox">◎</div></div><p>Revisión de funnel, PDP, PLP, carrito, navegación y puntos de fuga con salida accionable.</p><ul><li>Auditoría de fricción y objeciones</li><li>Roadmap priorizado</li><li>Hallazgos por impacto</li></ul><div class="ideal"><strong>Ideal para:</strong> marcas con tráfico que no convierte como debería.</div></article><article class="service"><div class="serviceTop"><div><span class="eyebrow">02</span><h3>Shopify Optimization</h3></div><div class="iconBox">⌘</div></div><p>Mejoras de theme, secciones, templates, variantes, media, mercados y localización.</p><ul><li>Mejoras UX en theme</li><li>Mercados / idioma / moneda</li><li>Apoyo de implementación</li></ul><div class="ideal"><strong>Ideal para:</strong> marcas que ya operan en Shopify y necesitan optimizar.</div></article><article class="service"><div class="serviceTop"><div><span class="eyebrow">03</span><h3>Landing Pages & Conversion Experiences</h3></div><div class="iconBox">▣</div></div><p>Diseño de experiencias enfocadas en campaña, claridad de oferta y estructura persuasiva.</p><ul><li>Landing pages de campaña</li><li>Jerarquía de copy y oferta</li><li>Soporte para performance</li></ul><div class="ideal"><strong>Ideal para:</strong> campañas, lanzamientos o productos con alto foco comercial.</div></article><article class="service"><div class="serviceTop"><div><span class="eyebrow">04</span><h3>Ongoing CRO Consulting</h3></div><div class="iconBox">↗</div></div><p>Colaboración continua para experimentar, priorizar y acompañar decisiones de ecommerce.</p><ul><li>Roadmap de experimentación</li><li>Acompañamiento mensual</li><li>Colaboración con agencias</li></ul><div class="ideal"><strong>Ideal para:</strong> marcas o agencias que necesitan criterio continuo de CRO + Shopify.</div></article></div></div></section>
 
-<section class="resultsReal section" id="trabajo"><div class="container">
+<section class="proofResults section" id="trabajo"><div class="container">
   <div class="sectionHeader">
     <span class="eyebrow">Resultados reales</span>
     <h2>Marcas que ya venden, ahora convierten mejor su mismo tráfico.</h2>
     <p>Crecimiento medible en ventas, conversión y valor promedio del pedido, desde el primer mes y a lo largo de procesos continuos de optimización.</p>
   </div>
 
-  <div class="firstMonthIntro">
+  <div class="proofMethod"><strong>En todas las marcas el proceso incluyó:</strong> auditoría, análisis de datos y comportamiento, formulación de hipótesis CRO, rediseño, implementación y trabajo continuo de optimización.</div>
+
+  <div class="proofSubhead">
     <h3>Resultados desde el primer mes</h3>
-    <p>Una muestra de cómo distintas categorías respondieron durante el primer mes de trabajo.</p>
+    <p>Una muestra de resultados reales en distintas categorías durante el primer mes de trabajo.</p>
   </div>
 
-  <div class="firstMonthGrid">
-    <article class="firstMonthCard">
-      <div class="caseMeta"><span class="casePill">Joyería</span><span class="casePeriod">Primer mes de trabajo</span></div>
+  <div class="proofGrid">
+    <article class="proofCard">
+      <div class="proofMeta"><span class="proofPill">Joyería</span><span class="proofPeriod">Primer mes de trabajo</span></div>
       <h3>Más ventas con una experiencia de compra mejor resuelta.</h3>
-      <div class="miniResults">
-        <div class="miniResult"><span class="miniResultLabel">Ventas</span><span class="miniResultValue">+36%</span><span class="miniResultNote">$1.16M MXN</span></div>
-        <div class="miniResult"><span class="miniResultLabel">Conversión</span><span class="miniResultValue">+6%</span><span class="miniResultNote">0.95%</span></div>
-        <div class="miniResult"><span class="miniResultLabel">AOV</span><span class="miniResultValue">+1%</span><span class="miniResultNote">$1,453.62 MXN</span></div>
+      <div class="proofMetrics">
+        <div class="proofMetric"><span class="label">Ventas</span><span class="value">+36%</span><span class="note">$1.16M MXN</span></div>
+        <div class="proofMetric"><span class="label">Conversión</span><span class="value">+6%</span><span class="note">0.95%</span></div>
+        <div class="proofMetric"><span class="label">AOV</span><span class="value">+1%</span><span class="note">$1,453.62 MXN</span></div>
       </div>
+      <a class="proofImageLink" href="assets/results/jewelry.webp" target="_blank" rel="noopener">
+        <img class="proofImage" src="assets/results/jewelry.webp" alt="Capturas reales de Shopify Analytics para una marca de joyería" loading="lazy">
+        <span class="proofImageCaption"><span>Capturas reales de Shopify Analytics</span><span>Ver en grande ↗</span></span>
+      </a>
+      <div class="proofProcess"><strong>Trabajo realizado:</strong> auditoría, análisis, hipótesis, rediseño, implementación y optimización continua.</div>
     </article>
 
-    <article class="firstMonthCard">
-      <div class="caseMeta"><span class="casePill">Suplementos</span><span class="casePeriod">Primer mes de trabajo</span></div>
+    <article class="proofCard dark">
+      <div class="proofMeta"><span class="proofPill">Suplementos</span><span class="proofPeriod">Primer mes de trabajo</span></div>
       <h3>Mejor conversión y crecimiento comercial desde el arranque.</h3>
-      <div class="miniResults">
-        <div class="miniResult"><span class="miniResultLabel">Ventas</span><span class="miniResultValue">+88%</span><span class="miniResultNote">$139,130 MXN</span></div>
-        <div class="miniResult"><span class="miniResultLabel">Conversión</span><span class="miniResultValue">+20%</span><span class="miniResultNote">1.00%</span></div>
-        <div class="miniResult"><span class="miniResultLabel">AOV</span><span class="miniResultValue">+6%</span><span class="miniResultNote">$853.76 MXN</span></div>
+      <div class="proofMetrics">
+        <div class="proofMetric"><span class="label">Ventas</span><span class="value">+88%</span><span class="note">$139,130 MXN</span></div>
+        <div class="proofMetric"><span class="label">Conversión</span><span class="value">+20%</span><span class="note">1.00%</span></div>
+        <div class="proofMetric"><span class="label">AOV</span><span class="value">+6%</span><span class="note">$853.76 MXN</span></div>
       </div>
+      <a class="proofImageLink" href="assets/results/supplements-first.webp" target="_blank" rel="noopener">
+        <img class="proofImage" src="assets/results/supplements-first.webp" alt="Capturas reales de Shopify Analytics para una marca de suplementos en el primer mes" loading="lazy">
+        <span class="proofImageCaption"><span>Capturas reales de Shopify Analytics</span><span>Ver en grande ↗</span></span>
+      </a>
+      <div class="proofProcess"><strong>Trabajo realizado:</strong> auditoría, análisis, hipótesis, rediseño, implementación y optimización continua.</div>
     </article>
 
-    <article class="firstMonthCard">
-      <div class="caseMeta"><span class="casePill">Alimentos saludables</span><span class="casePeriod">Primer mes de trabajo</span></div>
+    <article class="proofCard">
+      <div class="proofMeta"><span class="proofPill">Alimentos saludables</span><span class="proofPeriod">Primer mes de trabajo</span></div>
       <h3>Crecimiento en ventas mientras se sostiene el valor del pedido.</h3>
-      <div class="miniResults">
-        <div class="miniResult"><span class="miniResultLabel">Ventas</span><span class="miniResultValue">+30%</span><span class="miniResultNote">$1.06M MXN</span></div>
-        <div class="miniResult"><span class="miniResultLabel">Conversión</span><span class="miniResultValue">+1.5%</span><span class="miniResultNote">1.49%</span></div>
-        <div class="miniResult"><span class="miniResultLabel">AOV</span><span class="miniResultValue">+0.6%</span><span class="miniResultNote">$1,600.44 MXN</span></div>
+      <div class="proofMetrics">
+        <div class="proofMetric"><span class="label">Ventas</span><span class="value">+30%</span><span class="note">$1.06M MXN</span></div>
+        <div class="proofMetric"><span class="label">Conversión</span><span class="value">+1.5%</span><span class="note">1.49%</span></div>
+        <div class="proofMetric"><span class="label">AOV</span><span class="value">+0.6%</span><span class="note">$1,600.44 MXN</span></div>
       </div>
+      <a class="proofImageLink" href="assets/results/healthy-food.webp" target="_blank" rel="noopener">
+        <img class="proofImage" src="assets/results/healthy-food.webp" alt="Capturas reales de Shopify Analytics para una marca de alimentos saludables" loading="lazy">
+        <span class="proofImageCaption"><span>Capturas reales de Shopify Analytics</span><span>Ver en grande ↗</span></span>
+      </a>
+      <div class="proofProcess"><strong>Trabajo realizado:</strong> auditoría, análisis, hipótesis, rediseño, implementación y optimización continua.</div>
     </article>
 
-    <article class="firstMonthCard">
-      <div class="caseMeta"><span class="casePill">Gorras</span><span class="casePeriod">Primer mes de trabajo</span></div>
-      <h3>Una mejora fuerte en conversión sobre una base comercial pequeña.</h3>
-      <div class="miniResults">
-        <div class="miniResult"><span class="miniResultLabel">Ventas</span><span class="miniResultValue">+111%</span><span class="miniResultNote">USD 1,472.79</span></div>
-        <div class="miniResult"><span class="miniResultLabel">Conversión</span><span class="miniResultValue">+485%</span><span class="miniResultNote">0.81%</span></div>
-        <div class="miniResult"><span class="miniResultLabel">AOV</span><span class="miniResultValue">+23%</span><span class="miniResultNote">USD 61.02</span></div>
+    <article class="proofCard">
+      <div class="proofMeta"><span class="proofPill">Gorras</span><span class="proofPeriod">Primer mes de trabajo</span></div>
+      <h3>Una mejora fuerte en conversión sobre una base comercial en desarrollo.</h3>
+      <div class="proofMetrics">
+        <div class="proofMetric"><span class="label">Ventas</span><span class="value">+111%</span><span class="note">USD 1,472.79</span></div>
+        <div class="proofMetric"><span class="label">Conversión</span><span class="value">+485%</span><span class="note">0.81%</span></div>
+        <div class="proofMetric"><span class="label">AOV</span><span class="value">+23%</span><span class="note">USD 61.02</span></div>
       </div>
+      <a class="proofImageLink" href="assets/results/hats.webp" target="_blank" rel="noopener">
+        <img class="proofImage" src="assets/results/hats.webp" alt="Capturas reales de Shopify Analytics para una marca de gorras" loading="lazy">
+        <span class="proofImageCaption"><span>Capturas reales de Shopify Analytics</span><span>Ver en grande ↗</span></span>
+      </a>
+      <div class="proofProcess"><strong>Trabajo realizado:</strong> auditoría, análisis, hipótesis, rediseño, implementación y optimización continua.</div>
     </article>
   </div>
 
-  <article class="realCase dark continuousCase">
-    <div>
-      <div class="caseMeta"><span class="casePill">Suplementos</span><span class="casePeriod">9 meses continuos de trabajo</span></div>
+  <article class="longProof">
+    <div class="longProofHeader">
+      <div class="proofMeta"><span class="proofPill" style="background:rgba(255,255,255,.11);color:#d8e5f6">Suplementos</span><span class="proofPeriod" style="color:#a9bad0">9 meses continuos de trabajo</span></div>
       <h3>El crecimiento no fue un pico: se sostuvo durante nueve meses de optimización continua.</h3>
-      <p class="realCaseCopy">La mejora se construyó mes a mes sobre conversión, valor promedio del pedido y desempeño comercial, con decisiones continuas basadas en los datos de la tienda.</p>
-      <div class="caseWork"><strong>Resultado acumulado</strong><p>Comparativa entre el inicio del proceso y el noveno mes de trabajo.</p></div>
+      <p class="longProofCopy">El trabajo se construyó mes a mes sobre conversión, valor promedio del pedido y desempeño comercial, utilizando los datos de la tienda para decidir qué optimizar a continuación.</p>
     </div>
-    <div class="caseStats">
-      <div class="caseStat accent"><span class="statLabel">Ventas</span><span class="statValue">+389%</span><span class="statNote">$16,183 → $79,142.59 MXN</span></div>
-      <div class="caseStat"><span class="statLabel">Conversión</span><span class="statValue">+44%</span><span class="statNote">0.59% → 0.85%</span></div>
-      <div class="caseStat"><span class="statLabel">AOV</span><span class="statValue">+35%</span><span class="statNote">$373.21 → $505.16 MXN</span></div>
-      <div class="caseStat"><span class="statLabel">Pedidos</span><span class="statValue">+233%</span><span class="statNote">42 → 140 pedidos</span></div>
+    <div class="longProofMetrics">
+      <div class="longProofMetric accent"><span class="label">Ventas</span><span class="value">+389%</span><span class="note">$16,183 → $79,142.59 MXN</span></div>
+      <div class="longProofMetric"><span class="label">Conversión</span><span class="value">+44%</span><span class="note">0.59% → 0.85%</span></div>
+      <div class="longProofMetric"><span class="label">AOV</span><span class="value">+35%</span><span class="note">$373.21 → $505.16 MXN</span></div>
     </div>
+    <a class="proofImageLink" href="assets/results/supplements-9months.webp" target="_blank" rel="noopener">
+      <img class="proofImage" src="assets/results/supplements-9months.webp" alt="Capturas reales de Shopify Analytics después de nueve meses continuos de trabajo en una marca de suplementos" loading="lazy">
+      <span class="proofImageCaption"><span>Capturas reales: inicio vs. noveno mes</span><span>Ver en grande ↗</span></span>
+    </a>
+    <div class="proofProcess"><strong>Proceso continuo:</strong> auditoría, análisis, hipótesis, rediseño, implementación, medición y nuevas iteraciones.</div>
   </article>
 
-  <div class="resultsCta"><div><strong>¿Quieres encontrar las oportunidades de tu tienda?</strong><p>Revisemos tu caso y definamos qué vale la pena priorizar.</p></div><a class="btn btnLime google-booking-link" href="#google-booking">Agendar una sesión →</a></div>
+  <div class="proofResultsCta"><div><strong>¿Quieres encontrar las oportunidades de tu tienda?</strong><p>Revisemos tu caso y definamos qué vale la pena priorizar.</p></div><a class="btn btnLime google-booking-link" href="#google-booking">Agendar una sesión →</a></div>
 </div></section>
 
 <section class="section" id="proceso"><div class="container processGrid"><div><span class="eyebrow">Proceso</span><h2>No rediseño por gusto. Optimizo con una hipótesis.</h2><p style="color:var(--muted);font-size:18px">Las ideas se priorizan por impacto esperado, evidencia, esfuerzo y capacidad real de implementación. Menos backlog decorativo; más decisiones con criterio.</p></div><div class="steps"><div class="step"><span class="stepNum">1</span><div><h3>Diagnóstico</h3><p>Entiendo negocio, funnel, tráfico, comportamiento y restricciones técnicas.</p></div></div><div class="step"><span class="stepNum">2</span><div><h3>Priorización</h3><p>Convierto hallazgos en hipótesis ordenadas por impacto, confianza y esfuerzo.</p></div></div><div class="step"><span class="stepNum">3</span><div><h3>Diseño + implementación</h3><p>Aterrizo la recomendación en una experiencia que el equipo pueda usar o implementar.</p></div></div><div class="step"><span class="stepNum">4</span><div><h3>Medición + iteración</h3><p>Reviso qué aprendimos y qué siguiente decisión tiene más sentido.</p></div></div></div></div></section>

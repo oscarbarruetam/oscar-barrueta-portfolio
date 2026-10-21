@@ -74,3 +74,28 @@ footer{background:#f0f4fa;border-top:1px solid var(--line);padding:27px 0;color:
 @media(max-width:700px){.navLinks a:not(.navCta){display:none}.heroGrid{padding:57px 0 68px}.section{padding:66px 0}.container{width:calc(100% - 28px)}.heroLead{font-size:17px}.grid2,.grid3{grid-template-columns:1fr}.proof{flex-direction:column;align-items:start;padding:27px}.formBox{padding:23px}.footerInner{flex-direction:column;align-items:start}.preview{transform:none}.head p{font-size:16px}}
 @media(max-width:420px){.mark{width:34px;height:34px}.brand{font-size:14px}.navCta{font-size:12px;padding:9px 10px}h1{font-size:41px}.actions .btn{width:100%}.process{grid-template-columns:1fr}.mockText{font-size:18px}.browserBody{padding:13px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+
+/* Landing de diseño web: maqueta conceptual de sitio de servicios (no de ecommerce) */
+.webPreview{transform:rotate(-1deg)}
+.webPreview .browserBody{min-height:330px}
+.webShowcase{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:center;padding:28px 0 24px}
+.webShowcaseLabel{font-size:9px;font-weight:900;color:#3761ff;letter-spacing:.09em}
+.webShowcaseTitle{font-weight:900;font-size:clamp(20px,2.5vw,30px);line-height:1.08;letter-spacing:-.04em;margin-top:11px}
+.webShowcaseTitle span{color:#3761ff}
+.webShowcase p{font-size:11px;color:#718096;margin:10px 0 14px;max-width:190px}
+.webShowcaseCta{display:inline-flex;align-items:center;gap:8px;border-radius:8px;background:#0b1733;color:#fff;font-size:10px;font-weight:900;padding:8px 13px}
+.webShowcaseArt{height:170px;border-radius:17px;background:linear-gradient(140deg,#dfeaf8,#9db6d9);position:relative;overflow:hidden}
+.webShowcaseArt span{position:absolute;width:82px;height:122px;border-radius:15px 15px 0 0;background:#1e4468;transform:rotate(13deg);right:20%;bottom:-11px}
+.webShowcaseArt i{position:absolute;width:82px;height:100px;border-radius:60% 60% 6px 6px;background:#c8ff1a;left:10%;bottom:-12px;transform:rotate(-16deg)}
+.webShowcaseArt b{position:absolute;width:40px;height:40px;background:#edf2ff;border-radius:50%;right:9%;top:15%}
+.webMiniCards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.webMiniCards>div{min-height:73px;padding:13px 10px;border-radius:11px;background:#eaf0f8}
+.webMiniCards>div:nth-child(2){background:#edf5df}
+.webMiniCards>div:nth-child(3){background:#e8eef5}
+.webMiniCards b{display:block;font-size:9px;color:#3761ff}
+.webMiniCards span{display:block;font-size:11px;font-weight:900;margin-top:8px;line-height:1.2;color:#223e65}
+.inlineLink{color:#274fe2;text-decoration:underline;text-underline-offset:3px;font-weight:800}
+.inlineLink:focus-visible,.inlineLink:hover{color:#0b1733}
+@media(max-width:700px){.webPreview{transform:none}.webShowcaseTitle{font-size:24px}}
+@media(max-width:400px){.webShowcase{gap:12px}.webShowcaseArt{height:145px}.webShowcaseTitle{font-size:20px}.webShowcase p{font-size:10px}.webMiniCards>div{padding:11px 7px}.webMiniCards span{font-size:10px}}

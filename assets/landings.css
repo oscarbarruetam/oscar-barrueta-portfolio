@@ -129,3 +129,19 @@ footer{background:#f0f4fa;border-top:1px solid var(--line);padding:27px 0;color:
 
 
 @media(max-width:420px){.priceAmount{font-size:clamp(29px,8.2vw,43px);white-space:normal;overflow-wrap:anywhere}.priceAmount small{font-size:12px}.servicePrice{font-size:30px}}
+
+
+/* Vista conceptual CRO: tareas y método, sin métricas ficticias */
+.croScreen{padding:22px 0 4px}
+.croScreenHeader{display:flex;justify-content:space-between;align-items:center;gap:10px;color:#173050;font-size:15px;font-weight:900;letter-spacing:-.02em}
+.croScreenHeader b{font-size:10px;white-space:nowrap;background:#e3f6b4;padding:6px 9px;border-radius:50px;color:#2d4a26}
+.croProgress{border-radius:16px;border:1px solid #dce6f2;background:#fff;overflow:hidden;margin:20px 0}
+.croLine{display:flex;align-items:center;gap:13px;padding:16px 14px;border-bottom:1px solid #e1eaf4;font-size:12px;font-weight:800;color:#2b4566}
+.croLine:last-child{border:0}
+.croLine i{width:21px;height:21px;border:6px solid #c8ff1a;box-shadow:0 0 0 1px #95b833;border-radius:100%;flex-shrink:0;background:#0b1733}
+.croLine strong{margin-left:auto;color:#8d9baa;font-size:12px}
+.croKpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.croKpis>div{padding:12px 11px;background:#eaf0f9;border-radius:12px}
+.croKpis b{display:block;font-size:19px;color:#17345d;letter-spacing:-.04em}
+.croKpis span{font-size:10px;color:#6b7d91}
+@media(max-width:460px){.croScreenHeader{font-size:12px}.croLine{font-size:10px;padding:12px 9px}.croLine i{width:15px;height:15px;border-width:4px}.croKpis span{font-size:9px}}

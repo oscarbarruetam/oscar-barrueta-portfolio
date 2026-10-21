@@ -82,8 +82,7 @@
     const data=new FormData(form);
     const values=['Hola Oscar, vi tu landing sobre '+form.dataset.service+'.','Nombre: '+data.get('nombre'),'Negocio: '+data.get('negocio'),'Instagram o URL: '+(data.get('url')||'No compartida'),'Servicio: '+data.get('necesidad'),'Objetivo: '+(data.get('objetivo')||'Por definir')];
     const url='https://wa.me/5215529365784?text='+encodeURIComponent(values.join('\n'));
-    const opened=window.open(url,'_blank','noopener,noreferrer');
-    if(!opened) window.location.href=url;
+    window.location.href=url;
     document.getElementById('form-status').textContent='Tu mensaje está preparado. Verifica la conversación de WhatsApp y pulsa Enviar.';
   });
 })();

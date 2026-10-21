@@ -117,8 +117,8 @@ footer{background:#f0f4fa;border-top:1px solid var(--line);padding:27px 0;color:
 .priceSmall{font-size:13px;color:#566b85;line-height:1.5;margin-top:16px}
 .priceActions{margin-top:26px;display:flex;align-items:center;flex-wrap:wrap;gap:15px}
 .priceNote{font-size:12px;color:#5d6f87;line-height:1.5}
-.heroPrice{font-size:18px;font-weight:850;color:#c8ff1a;margin:22px 0 0}
-.heroPrice span{color:#d3e0ef;font-size:13px;font-weight:600;margin-left:9px}
+.heroPrice{font-size:clamp(30px,3.7vw,46px);font-weight:900;line-height:1.15;letter-spacing:-.035em;color:#c8ff1a;margin:23px 0 0}
+.heroPrice span{display:block;max-width:640px;color:#e4edf9;font-size:14px;line-height:1.55;font-weight:700;letter-spacing:0;margin:11px 0 0}
 .servicePrice{font-size:35px;font-weight:950;color:#102746;letter-spacing:-.04em;margin:15px 0 5px}
 .servicePrice small{display:block;font-size:12px;color:#56718d;letter-spacing:0;font-weight:750}
 .card.featured .servicePrice{color:#c8ff1a}

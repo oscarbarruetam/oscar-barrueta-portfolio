@@ -99,3 +99,30 @@ footer{background:#f0f4fa;border-top:1px solid var(--line);padding:27px 0;color:
 .inlineLink:focus-visible,.inlineLink:hover{color:#0b1733}
 @media(max-width:700px){.webPreview{transform:none}.webShowcaseTitle{font-size:24px}}
 @media(max-width:400px){.webShowcase{gap:12px}.webShowcaseArt{height:145px}.webShowcaseTitle{font-size:20px}.webShowcase p{font-size:10px}.webMiniCards>div{padding:11px 7px}.webMiniCards span{font-size:10px}}
+
+
+/* Secciones de precio fijo para campañas */
+.priceEyebrow{display:inline-flex;padding:7px 12px;background:#e9f8bc;color:#23401c;font-size:11px;letter-spacing:.08em;font-weight:900;border-radius:999px;text-transform:uppercase}
+.priceSection{background:#eef5ff}
+.pricePanel{border:1px solid #d4e1ed;border-radius:28px;background:#fff;padding:36px;box-shadow:0 12px 36px rgba(17,42,79,.06)}
+.priceHeading{display:flex;align-items:end;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.priceHeading h2{margin:16px 0 8px;font-size:clamp(31px,4.1vw,49px);letter-spacing:-.045em;line-height:1.05}
+.priceHeading p{color:#5b6d84;max-width:680px;margin:0}
+.priceAmount{font-size:clamp(43px,5vw,67px);font-weight:950;letter-spacing:-.06em;line-height:1;white-space:nowrap;color:#0b1733}
+.priceAmount small{font-size:14px;letter-spacing:0;font-weight:850;color:#60738c;display:block;margin:11px 0 0}
+.priceGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding-top:26px;margin-top:27px;border-top:1px solid #e0e8f1}
+.priceGrid h3{margin:0 0 12px;font-size:19px;letter-spacing:-.02em}
+.priceGrid ul{padding-left:18px;color:#475b75;margin:0}
+.priceGrid li{margin:8px 0}
+.priceSmall{font-size:13px;color:#566b85;line-height:1.5;margin-top:16px}
+.priceActions{margin-top:26px;display:flex;align-items:center;flex-wrap:wrap;gap:15px}
+.priceNote{font-size:12px;color:#5d6f87;line-height:1.5}
+.heroPrice{font-size:18px;font-weight:850;color:#c8ff1a;margin:22px 0 0}
+.heroPrice span{color:#d3e0ef;font-size:13px;font-weight:600;margin-left:9px}
+.servicePrice{font-size:35px;font-weight:950;color:#102746;letter-spacing:-.04em;margin:15px 0 5px}
+.servicePrice small{display:block;font-size:12px;color:#56718d;letter-spacing:0;font-weight:750}
+.card.featured .servicePrice{color:#c8ff1a}
+.card.featured .servicePrice small{color:#d9e6f6}
+.serviceScope{display:block;margin-top:14px;padding-top:14px;border-top:1px solid #e0e8ef;font-size:12px;color:#65758c;line-height:1.55}
+.card.featured .serviceScope{border-color:#45617e;color:#c4d4e8}
+@media(max-width:760px){.pricePanel{padding:23px}.priceGrid{grid-template-columns:1fr;gap:16px}.priceHeading{display:block}.priceAmount{margin-top:17px}.heroPrice span{display:block;margin-left:0;margin-top:5px}}

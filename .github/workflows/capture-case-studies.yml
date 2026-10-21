@@ -1,0 +1,61 @@
+name: Capture six live ecommerce sites for case study portfolio
+on:
+  push:
+    branches:
+      - landings-evidencia-y-casos-oct2026
+    paths:
+      - .github/workflows/capture-case-studies.yml
+permissions:
+  contents: write
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Browser
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Capture genuine browser screenshots
+        shell: bash
+        run: |
+          mkdir -p assets/sites
+          node <<'JS'
+          const { chromium } = require('playwright');
+          const fs = require('fs');
+          const sites = [
+            ['healthhack', 'https://h2hack.mx/'],
+            ['klak-hats','https://www.klakhats.com/'],
+            ['sleep-ritual','https://sleepritual.mx/'],
+            ['santory','https://santory.com.mx/'],
+            ['bloom-nutrition-mexico','https://bloomnu.mx/'],
+            ['amorasana','https://www.amorasana.com/']
+          ];
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            for(const [slug,url] of sites){
+              const page=await browser.newPage({viewport:{width:1440,height:960},deviceScaleFactor:1,locale:'es-MX',userAgent:'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'});
+              try{
+                await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
+                await page.waitForTimeout(4500);
+                await page.evaluate(()=>{window.scrollTo(0,0);document.querySelectorAll('[class*="cookie"],[id*="cookie"],[class*="newsletter-popup"],[class*="modal-overlay"]').forEach(x=>{if(getComputedStyle(x).position==='fixed')x.style.display='none'})});
+                await page.screenshot({path:'assets/sites/'+slug+'.jpg',type:'jpeg',quality:80,fullPage:false,animations:'disabled'});
+                console.log('Captured:',slug,'URL:',page.url());
+              }catch(e){console.log('ERROR',slug,String(e));}
+              await page.close();
+            }
+            await browser.close();
+          })().catch(x=>{console.log(String(x));process.exitCode=1;});
+          JS
+      - name: Commit screenshot images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/sites/*.jpg
+          if git diff --cached --quiet; then echo 'No screenshots captured'; else git commit -m "Capture actual homepage visuals from six brand sites"; git push; fi

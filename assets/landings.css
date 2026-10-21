@@ -145,3 +145,71 @@ footer{background:#f0f4fa;border-top:1px solid var(--line);padding:27px 0;color:
 .croKpis b{display:block;font-size:19px;color:#17345d;letter-spacing:-.04em}
 .croKpis span{font-size:10px;color:#6b7d91}
 @media(max-width:460px){.croScreenHeader{font-size:12px}.croLine{font-size:10px;padding:12px 9px}.croLine i{width:15px;height:15px;border-width:4px}.croKpis span{font-size:9px}}
+
+
+/* Evidencia real de Shopify Analytics, sin salir de la landing */
+.caseIntro{max-width:750px;color:#52657d;font-size:16px;line-height:1.65}
+.caseGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px}
+.caseCard{background:#fff;border:1px solid #d9e5f2;border-radius:19px;padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.caseCard.spotlight{background:#0b1733;color:#fff;border-color:#0b1733}
+.caseCard .caseMeta{font-size:11px;color:#546f90;font-weight:850;letter-spacing:.085em;text-transform:uppercase}
+.caseCard.spotlight .caseMeta{color:#c8ff1a}
+.caseCard h3{font-size:20px;letter-spacing:-.035em;margin:0;line-height:1.2}
+.caseStats{display:flex;flex-wrap:wrap;gap:16px;align-items:start;margin-bottom:3px}
+.caseStats>div{min-width:80px;display:flex;flex-direction:column;gap:3px}
+.caseStats b{font-size:26px;font-weight:900;letter-spacing:-.045em;color:#102c55}
+.caseStats small{font-size:11px;line-height:1.4;color:#60758e;font-weight:750}
+.caseCard.spotlight .caseStats b{color:#c8ff1a}
+.caseCard.spotlight .caseStats small{color:#cedbeb}
+.caseCard .caseContext{margin:0;color:#596d84;font-size:12px;line-height:1.6}
+.caseCard.spotlight .caseContext{color:#cedbeb}
+.caseThumb{border:none;background:#edf3f8;border-radius:13px;padding:0;cursor:zoom-in;width:100%;overflow:hidden;margin-top:auto;position:relative;text-align:left}
+.caseThumb img{display:block;width:100%;height:165px;object-fit:contain;background:#eef2f8}
+.caseThumb span{display:block;padding:8px 11px;color:#213b61;font-size:11px;font-weight:800}
+.caseThumb:focus-visible{outline:3px solid #3761ff;outline-offset:3px}
+.caseCard.spotlight .caseThumb span{background:#e8f0fa}
+.caseDisclosure{font-size:12px;line-height:1.6;color:#61748b;margin:19px 0 23px}
+.caseLightbox{max-width:min(1040px,94vw);max-height:94vh;border:none;border-radius:16px;padding:18px;background:#fff;color:#0b1733;box-shadow:0 30px 100px #0005}
+.caseLightbox::backdrop{background:rgba(4,17,35,.8)}
+.caseLightbox img{max-height:76vh;max-width:100%;display:block;margin:auto;object-fit:contain}
+.caseLightbox .closePreview{display:block;margin:0 0 12px auto;background:#0b1733;border:0;border-radius:9px;color:#fff;padding:9px 14px;font-size:13px;font-weight:800;cursor:pointer}
+@media(max-width:950px){.caseGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.caseGrid{grid-template-columns:1fr}.caseCard{padding:19px}.caseStats b{font-size:25px}.caseThumb img{height:200px}}
+/* Capturas reales de sitios ecommerce */
+.siteScreenGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;margin-top:28px}
+.siteScreenCard{border:1px solid #d9e4f2;background:#fff;border-radius:18px;overflow:hidden;min-width:0}
+.siteScreenFrame{aspect-ratio:1.48;background:#dfe8f1;overflow:hidden;position:relative}
+.siteScreenFrame img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .28s}
+.siteScreenCard:hover .siteScreenFrame img{transform:scale(1.025)}
+.siteScreenName{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 17px}
+.siteScreenName strong{font-size:16px;color:#102746;letter-spacing:-.025em}
+.siteScreenName span{font-size:11px;color:#536d87}
+.siteScreenSectionNote{margin-top:17px;font-size:12px;color:#556f8b;line-height:1.6}
+@media(max-width:880px){.siteScreenGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.siteScreenGrid{grid-template-columns:1fr}.siteScreenFrame{aspect-ratio:1.65}}
+/* Ejemplos conceptuales de cuatro tipos de webs: no son capturas de clientes */
+.webExampleGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px;margin-top:28px}
+.webExample{border:1px solid #dce5f2;background:#fff;border-radius:20px;overflow:hidden}
+.webExampleCanvas{height:230px;padding:18px;background:#eff4f9}
+.webExampleBrowser{height:100%;overflow:hidden;background:#fff;border:1px solid #d7e1ec;border-radius:12px;box-shadow:0 8px 20px #1a33560b}
+.webExampleTop{height:28px;display:flex;gap:4px;align-items:center;padding:0 12px;border-bottom:1px solid #e5ebf3}
+.webExampleTop i{height:6px;width:6px;border-radius:50%;background:#c2cede}
+.webExampleBody{height:calc(100% - 28px);padding:15px;display:grid;grid-template-columns:1.1fr .8fr;gap:10px;align-items:center}
+.webExampleBody div{min-width:0}
+.webExampleBody b{display:block;font-size:18px;line-height:1.15;letter-spacing:-.06em;color:#0e2545;margin:0 0 11px}
+.webExampleBody small{display:block;color:#71829b;font-size:9px;max-width:190px;line-height:1.5}
+.webExampleAction{display:block;width:max-content;margin-top:10px;padding:8px 12px;border-radius:5px;background:#0b1733;color:#fff;font-size:9px;font-weight:800}
+.webExamplePicture{height:135px;background:linear-gradient(140deg,#dce7f5,#8db0d5);border-radius:8px;position:relative;overflow:hidden}
+.webExamplePicture:before{content:'';position:absolute;width:135px;height:135px;background:linear-gradient(40deg,#9cb9db,#eff6ff);border-radius:50%;top:45px;left:-32px}
+.webExample:nth-child(2) .webExampleCanvas{background:#f1f2ea}
+.webExample:nth-child(2) .webExamplePicture{background:linear-gradient(150deg,#b1c9a1,#365642)}
+.webExample:nth-child(3) .webExampleCanvas{background:#edf1f9}
+.webExample:nth-child(3) .webExamplePicture{background:linear-gradient(150deg,#a8b5df,#423c79)}
+.webExample:nth-child(4) .webExampleCanvas{background:#f7edec}
+.webExample:nth-child(4) .webExamplePicture{background:linear-gradient(150deg,#f5b99f,#b35457)}
+.webExampleCopy{padding:17px 20px 19px}
+.webExampleCopy h3{font-size:18px;margin:0 0 6px;color:#0e2440}
+.webExampleCopy p{font-size:13px;line-height:1.55;color:#56677e;margin:0}
+@media(max-width:730px){.webExampleGrid{grid-template-columns:1fr}.webExampleCanvas{height:220px}}
+/* Pie de alcance CRO */
+.monthlyFootnote{font-size:12px;line-height:1.6;color:#6a788b;margin-top:18px;border-top:1px solid #dfe8f1;padding-top:15px}

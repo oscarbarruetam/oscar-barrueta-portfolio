@@ -213,3 +213,21 @@ footer{background:#f0f4fa;border-top:1px solid var(--line);padding:27px 0;color:
 @media(max-width:730px){.webExampleGrid{grid-template-columns:1fr}.webExampleCanvas{height:220px}}
 /* Pie de alcance CRO */
 .monthlyFootnote{font-size:12px;line-height:1.6;color:#6a788b;margin-top:18px;border-top:1px solid #dfe8f1;padding-top:15px}
+
+
+/* Cuatro ejemplos de webs ficticias con imágenes locales */
+.webMockThumb{display:block;width:100%;padding:0;border:0;background:#eef3f8;color:#0b1733;cursor:zoom-in;text-align:left;position:relative}
+.webMockThumb>img{display:block;width:100%;height:auto;aspect-ratio:4 / 3;object-fit:contain;transition:transform .24s ease}
+.webMockThumb:hover>img{transform:scale(1.016)}
+.webMockThumb:focus-visible{outline:3px solid #3761ff;outline-offset:3px;z-index:1}
+.webMockExpand{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#0b1733;color:#fff;font-weight:800;font-size:12px;padding:12px 16px}
+.webMockExpand span:last-child{color:#c8ff1a;font-size:19px;line-height:1}
+.webMockLabel{display:block;font-size:10px;letter-spacing:.08em;color:#55708b;font-weight:900;margin:0 0 8px}
+.webMockDialog{position:fixed;max-width:min(1360px,96vw);width:max-content;max-height:96vh;border:none;border-radius:18px;padding:12px;background:#fff;color:#0b1733;box-shadow:0 24px 80px #0006}
+.webMockDialog::backdrop{background:rgba(4,18,39,.86)}
+.webMockDialogTools{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:0 0 11px 5px;color:#0b1733;font-size:14px}
+.webMockDialogTools>button{padding:8px 12px;border:0;border-radius:8px;background:#0b1733;color:#fff;font-size:12px;font-weight:800;cursor:pointer}
+.webMockDialogTools>button:focus-visible{outline:3px solid #3761ff;outline-offset:2px}
+.webMockDialog img{display:block;max-height:calc(96vh - 72px);max-width:100%;object-fit:contain;margin:auto;border-radius:8px}
+@media(max-width:730px){.webMockDialogTools{font-size:12px;gap:12px}.webMockExpand{padding:11px 13px}}
+@media(prefers-reduced-motion:reduce){.webMockThumb>img{transition:none}.webMockThumb:hover>img{transform:none}}

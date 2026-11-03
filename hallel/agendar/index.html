@@ -54,6 +54,14 @@ footer{background:var(--ink);color:#c5d2c8;padding:27px 0}
 .foot a:hover{text-decoration:underline}
 @media(max-width:840px){.layout{grid-template-columns:1fr}.side{order:2}}
 @media(max-width:600px){.shell{width:calc(100% - 32px)}.nav{min-height:67px}.brand img{width:122px}.navtools{gap:11px}.hero{padding:52px 0 24px}.hero h1{font-size:clamp(42px,11vw,66px)}.layout{margin-bottom:57px}.booking{padding:25px 22px}.booking-link{padding:14px 16px;font-size:14px}.side{padding:24px}.foot{flex-direction:column;align-items:flex-start}}
+
+.social-contact{margin-top:24px}
+.social-divider{display:flex;align-items:center;gap:12px;margin-bottom:13px;color:#708376;font-size:10px;font-weight:850;letter-spacing:.1em}
+.social-divider:before,.social-divider:after{content:"";height:1px;background:var(--line);flex:1}
+.instagram-dm{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 20px;border:1px solid #9ab1a0;border-radius:8px;color:var(--moss);background:#fff;min-height:55px;font-size:14px;font-weight:850;transition:background .15s,border-color .15s}
+.instagram-dm:hover{background:#edf3eb;border-color:var(--moss)}
+.instagram-label{display:flex;align-items:center;gap:11px}
+.dm-arrow{font-size:21px;line-height:1}
 </style>
 </head><body>
 <header><div class="shell nav"><a class="brand" href="../" aria-label="HALLEL — Inicio"><img src="../assets/logo.svg" alt="HALLEL"></a>
@@ -76,6 +84,9 @@ footer{background:var(--ink);color:#c5d2c8;padding:27px 0}
 </div>
 <div id="service-context" class="service-context" hidden><strong><span data-en="YOUR SERVICE OF INTEREST" data-es="SERVICIO DE TU INTERÉS">SERVICIO DE TU INTERÉS</span></strong><span id="service-selection"></span></div>
 <a class="booking-link" href="https://calendar.app.google/pT9L2mMR988rwKQ38" target="_blank" rel="noopener noreferrer" aria-label="Abrir agenda de HALLEL en Google Calendar"><span data-en="View availability and book" data-es="Ver disponibilidad y reservar">Ver disponibilidad y reservar</span> <span class="arrow" aria-hidden="true">↗</span></a>
+<div class="social-contact"><div class="social-divider"><span data-en="OR CONTACT ME DIRECTLY" data-es="O ESCRÍBEME DIRECTAMENTE">O ESCRÍBEME DIRECTAMENTE</span></div>
+<a class="instagram-dm" href="https://ig.me/m/oscarbarrueta.cro" target="_blank" rel="noopener noreferrer" aria-label="Abrir mensaje directo en Instagram a @oscarbarrueta.cro"><span class="instagram-label"><svg aria-hidden="true" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.75" cy="6.4" r=".85" fill="currentColor" stroke="none"/></svg><span data-en="Message me on Instagram" data-es="Escríbeme por DM en Instagram">Escríbeme por DM en Instagram</span></span><span class="dm-arrow" aria-hidden="true">↗</span></a>
+</div>
 <p class="booking-note"><span data-en="You will complete the booking on Google Calendar. Only Google confirms the appointment and sends meeting details. Available time slots may differ from the usual windows shown above." data-es="Completarás la reserva en Google Calendar. Solo Google confirma la cita y envía sus detalles. Los horarios disponibles pueden variar respecto a las ventanas habituales indicadas.">Completarás la reserva en Google Calendar. Solo Google confirma la cita y envía sus detalles. Los horarios disponibles pueden variar respecto a las ventanas habituales indicadas.</span></p>
 </div>
 <aside class="side"><span class="eyebrow" style="color:#C8F36B"><span data-en="WHAT TO EXPECT" data-es="CÓMO FUNCIONA">CÓMO FUNCIONA</span></span>

@@ -214,3 +214,102 @@ html.modals-ready .service-dialog .service-chapter{display:block}
 .migration-faq details p{margin:10px 0 0;line-height:1.7;font-size:13px;color:#4a6252}
 .migration-base-note,.migration-extra-note{margin:0;padding:17px 19px}
 @media(max-width:600px){.migration-compare-item .compare-title{flex-direction:column;gap:2px}.migration-compare-item .compare-title b{white-space:normal}}
+
+/* Main service pages: four-step process section, consistent with HALLEL visual identity */
+.service-process{
+  background:#F5F7FA;
+  padding:84px 0;
+  scroll-margin-top:85px;
+}
+.service-process-grid{
+  display:grid;
+  grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+  gap:clamp(42px,6vw,90px);
+  align-items:start;
+}
+.service-process-intro{min-width:0}
+.service-process-label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#365B4F;
+  font-size:12px;
+  font-weight:850;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.service-process-label::before{
+  content:"";
+  display:block;
+  width:23px;
+  height:2px;
+  background:var(--signal);
+  flex:0 0 auto;
+}
+.service-process h2{
+  max-width:520px;
+  margin:23px 0 22px;
+  font-size:clamp(38px,4.25vw,60px);
+  line-height:1.04;
+  letter-spacing:-.062em;
+  font-weight:850;
+  color:#111A28;
+}
+.service-process-intro>p{
+  max-width:435px;
+  margin:0;
+  color:#5D6F86;
+  font-size:clamp(15px,1.35vw,17px);
+  line-height:1.66;
+}
+.service-process-steps{display:grid;gap:14px;min-width:0}
+.service-process-step{
+  display:flex;
+  align-items:flex-start;
+  gap:27px;
+  min-width:0;
+  padding:20px;
+  border:1px solid #D8E1EE;
+  border-radius:17px;
+  background:#fff;
+}
+.service-process-number{
+  flex:0 0 44px;
+  width:44px;
+  height:44px;
+  border-radius:11px;
+  background:#101A35;
+  color:#C8F36B;
+  display:grid;
+  place-items:center;
+  font-size:17px;
+  line-height:1;
+  font-weight:850;
+}
+.service-process-step h3{
+  margin:5px 0 7px;
+  color:#141F30;
+  font-size:18px;
+  line-height:1.25;
+  letter-spacing:-.025em;
+  font-weight:800;
+}
+.service-process-step p{
+  margin:0;
+  color:#62758E;
+  font-size:15px;
+  line-height:1.58;
+}
+@media(max-width:930px){
+  .service-process-grid{grid-template-columns:1fr;gap:33px}
+  .service-process h2{max-width:680px}
+  .service-process-intro>p{max-width:670px}
+}
+@media(max-width:600px){
+  .service-process{padding:62px 0}
+  .service-process h2{font-size:clamp(36px,10vw,48px);margin:18px 0}
+  .service-process-step{gap:14px;padding:17px 15px;border-radius:14px}
+  .service-process-number{width:40px;height:40px;flex-basis:40px;border-radius:10px}
+  .service-process-step h3{font-size:16px;margin-top:4px}
+  .service-process-step p{font-size:14px}
+}

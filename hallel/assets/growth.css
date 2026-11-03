@@ -88,3 +88,6 @@
 .growth-pillar{padding:22px}
 .growth-header{margin-bottom:24px}
 }
+
+/* Keep the Growth header usable on medium-width tablets. */
+@media(min-width:651px) and (max-width:1000px){.growth-hero .shell{width:calc(100% - 36px)}.topnav a:nth-child(2),.topnav a:nth-child(4){display:none}.growth-hero h1{font-size:clamp(57px,7vw,86px)}}

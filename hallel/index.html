@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#151B1C">
+<meta name="description" content="HALLEL is a boutique Shopify and CRO studio. We help ambitious commerce teams find friction, build better shopping experiences and grow through evidence-led decisions.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HALLEL — Better commerce. Measurable growth.">
+<meta property="og:description" content="Shopify, CRO, experimentation and lifecycle strategy for ambitious commerce teams.">
+<meta property="og:image" content="assets/icon.svg">
+<title>HALLEL — Commerce &amp; Growth Studio</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#151B1C;--paper:#F8F7F2;--moss:#31584D;--signal:#C8F36B;--mist:#D9DDD7;--white:#fff;--sub:#5b6864;--line:#d8ded7;--max:1220px}
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid #528570;outline-offset:4px}
+.sr-only{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+.skip{position:absolute;top:-100px;left:12px;background:var(--signal);color:var(--ink);padding:12px;z-index:100}.skip:focus{top:10px}
+.wrap{max-width:var(--max);width:calc(100% - 56px);margin:auto}
+.nav{position:sticky;top:0;z-index:50;background:rgba(21,27,28,.97);color:var(--white);border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(16px)}
+.nav-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{width:172px;height:38px;object-fit:contain;object-position:left center;display:block}
+.nav-links{display:flex;gap:30px;align-items:center}.nav-links a:not(.nav-cta){font-size:13px;font-weight:700;color:#d1dad4;transition:color .15s}.nav-links a:hover{color:var(--signal)}
+.nav-actions{display:flex;align-items:center;gap:16px}
+.lang{background:transparent;color:var(--white);border:1px solid #64716c;padding:8px 10px;border-radius:7px;font-size:12px;font-weight:800;letter-spacing:.08em}
+.nav-cta{background:var(--signal);padding:13px 19px;color:var(--ink);border-radius:8px;font-size:13px;font-weight:800;white-space:nowrap}
+.menu{display:none;border:1px solid #64716c;color:white;background:transparent;border-radius:8px;width:40px;height:38px;font-size:20px}
+.section{padding:112px 0}
+.kicker{font-size:11px;letter-spacing:.21em;text-transform:uppercase;font-weight:800;color:var(--moss)}
+.kicker.light{color:var(--signal)}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{letter-spacing:-.065em}
+h1{font-size:clamp(62px,7.2vw,116px);font-weight:800;line-height:.97;margin:25px 0 30px}
+h2{font-size:clamp(42px,5.5vw,78px);font-weight:800;line-height:1.02;margin:19px 0 20px}
+h3{font-size:clamp(23px,2.2vw,32px);font-weight:800;line-height:1.15}
+.copy{max-width:560px;color:var(--sub);font-size:17px}
+.btn{min-height:53px;padding:14px 22px;border-radius:8px;display:inline-flex;gap:26px;justify-content:space-between;align-items:center;font-size:14px;font-weight:800;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-signal{background:var(--signal);color:var(--ink)}
+.btn-dark{background:var(--ink);color:white}
+.btn-line{border:1px solid #778b82;color:inherit}
+.btn svg{width:18px;height:18px;flex:0 0 18px}
+.hero{background:var(--ink);color:var(--paper);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;min-height:700px;align-items:center;gap:30px}
+.hero-main{padding:90px 0 116px;position:relative;z-index:1}
+.hero h1{max-width:770px}
+.hero h1 em{font-style:normal;color:var(--signal)}
+.hero .lead{font-size:clamp(17px,1.6vw,21px);max-width:550px;color:#b9c5bf;line-height:1.6}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:35px}
+.hero-foot{display:flex;gap:18px;margin-top:77px;align-items:center;color:#b3c1bb;font-size:12px;font-weight:700;letter-spacing:.07em}
+.hero-foot span:before{content:"";display:inline-block;width:7px;height:7px;margin-right:10px;border-radius:50%;background:var(--signal)}
+.hero-visual{position:relative;height:590px;display:grid;place-items:center;isolation:isolate}
+.hero-visual:before{content:"";position:absolute;inset:5% -70px 5% 5%;background:#274b41;border-radius:8px;transform:skew(-17deg);opacity:.83}
+.hero-visual:after{content:"";position:absolute;width:75%;height:75%;border:1px solid rgba(200,243,107,.24);border-radius:100%;transform:rotate(-20deg)}
+.hero-symbol{width:min(86%,410px);z-index:2;filter:drop-shadow(8px 16px 0 rgba(21,27,28,.23))}
+.data-chip{position:absolute;z-index:4;display:grid;gap:2px;background:var(--paper);color:var(--ink);border:1px solid var(--mist);border-radius:7px;padding:13px 16px;box-shadow:0 20px 40px #0d201a44;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase}
+.data-chip b{font-size:21px;letter-spacing:-.06em}
+.chip-one{left:-10px;top:66px}.chip-two{right:-20px;bottom:85px}
+.intro-band{background:var(--moss);color:var(--paper);padding:31px 0}
+.intro-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.intro-inner b{font-size:16px;letter-spacing:-.03em}
+.intro-tags{display:flex;gap:24px;flex-wrap:wrap;color:#d8e5df;font-size:12px;letter-spacing:.09em;font-weight:700}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:40px}
+.sec-head .copy{max-width:400px;margin-bottom:4px}
+.services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.service{background:#fff;border:1px solid var(--line);border-radius:10px;min-height:295px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .15s}
+.service:hover{transform:translateY(-3px)}
+.service-top{display:flex;justify-content:space-between;align-items:start}
+.service-number{color:var(--moss);font-size:12px;font-weight:800;letter-spacing:.15em}
+.service-icon{width:51px;height:51px;border:1px solid var(--line);display:grid;place-items:center;border-radius:8px;background:#eef3ec}
+.service-icon svg{width:27px;height:27px;stroke:var(--moss);stroke-width:1.6;fill:none}
+.service h3{font-size:30px;margin:25px 0 12px}
+.service p{color:var(--sub);font-size:15px;max-width:430px;margin-bottom:15px}
+.service-bottom{padding-top:19px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--moss);font-size:12px;font-weight:800;letter-spacing:.04em}
+.philosophy{background:var(--ink);color:var(--paper)}
+.philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:9vw;align-items:center}
+.philosophy h2{margin-bottom:28px}
+.serif{color:var(--signal);font-family:Georgia,"Times New Roman",serif;font-weight:400;font-style:italic;letter-spacing:-.055em}
+.philosophy p{color:#c0cac5;font-size:17px;max-width:480px}
+.principles{border-top:1px solid #5a655f}
+.principle{display:grid;grid-template-columns:60px 1fr;gap:18px;border-bottom:1px solid #46524c;padding:25px 0}
+.principle .index{color:var(--signal);font-size:12px;font-weight:800}
+.principle strong{display:block;font-size:20px;letter-spacing:-.04em}
+.principle p{margin:6px 0 0;font-size:14px;color:#a9b6b0}
+.evidence{background:#e9eee6}
+.evidence h2{max-width:780px}
+.note{font-size:12px;color:#566960;line-height:1.7}
+.proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:38px 0 20px}
+.proof{padding:30px;background:var(--paper);border:1px solid var(--line);border-radius:9px;display:flex;flex-direction:column;min-height:305px}
+.proof small{color:var(--moss);font-weight:800;text-transform:uppercase;font-size:11px;letter-spacing:.13em}
+.proof strong{display:block;margin:18px 0 8px;font-size:clamp(50px,5vw,80px);line-height:1;font-weight:800;letter-spacing:-.085em}
+.proof h3{font-size:20px;letter-spacing:-.04em;margin:0 0 15px}
+.proof p{font-size:14px;color:var(--sub);margin:0 auto 0 0}
+.proof .period{border-top:1px solid var(--line);margin-top:auto;padding-top:18px;font-size:12px;font-weight:700;color:var(--moss)}
+.evidence-footer{display:flex;gap:30px;justify-content:space-between;align-items:center}
+.process-grid{display:grid;grid-template-columns:.83fr 1.17fr;gap:8vw}
+.steps{counter-reset:step}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:27px 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step small{font-size:12px;color:var(--moss);font-weight:800}
+.step h3{font-size:23px;margin-bottom:8px}
+.step p{color:var(--sub);font-size:15px;margin:0;max-width:500px}
+.about{background:#dfe6db}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw;align-items:center}
+.about-mark{min-height:390px;background:var(--moss);border-radius:8px;display:grid;place-items:center;position:relative;overflow:hidden}
+.about-mark svg{width:45%;z-index:1}
+.about-mark:before{content:"";position:absolute;width:70%;height:160%;background:rgba(200,243,107,.11);transform:rotate(22deg)}
+.about-copy .copy{max-width:590px}
+.about-copy .signature{display:flex;gap:15px;align-items:center;border-top:1px solid #b8c9bc;padding-top:23px;margin-top:29px;font-size:13px;color:#4b5d53}
+.about-copy .signature b{color:var(--ink);font-size:15px}
+.faq-list{border-top:1px solid var(--line);max-width:980px}
+.faq-list details{border-bottom:1px solid var(--line);padding:0}
+.faq-list summary{cursor:pointer;list-style:none;padding:24px 42px 24px 0;position:relative;font-size:18px;font-weight:700}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:"+";position:absolute;right:8px;top:19px;font-weight:400;font-size:27px}
+.faq-list details[open] summary:after{content:"−"}
+.faq-list details p{max-width:760px;color:var(--sub);margin:-1px 0 26px;font-size:15px}
+.contact{background:var(--ink);color:var(--paper);padding:112px 0 52px}
+.contact-panel{display:grid;grid-template-columns:1.1fr .9fr;gap:9vw;align-items:center}
+.contact h2{font-size:clamp(55px,6.4vw,95px);max-width:690px}
+.contact p{color:#bdcbc3;font-size:17px;max-width:540px}
+.contact-action{display:grid;gap:12px;max-width:390px;margin-left:auto}
+.contact-action .btn{justify-content:space-between}
+.contact-action small{color:#a8b6ae;font-size:12px;line-height:1.6}
+footer{background:var(--ink);color:#c4d0c9}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;gap:24px;border-top:1px solid #4d5a54;padding:35px 0}
+.footer-grid img{width:128px;height:auto;display:block}
+.footer-grid small{font-size:12px}
+.footer-link{color:var(--signal);font-size:13px}
+@media(max-width:1020px){
+.hero-grid{grid-template-columns:1fr .8fr;gap:0}.hero h1{font-size:clamp(54px,7vw,86px)}.hero-visual{height:460px}.chip-one{left:0}
+.sec-head{display:block}.sec-head .copy{max-width:680px}
+.philosophy-grid,.process-grid,.about-grid,.contact-panel{gap:40px}
+}
+@media(max-width:760px){
+.wrap{width:calc(100% - 36px)}
+.nav-inner{min-height:68px}.brand img{width:142px;height:auto}
+.menu{display:inline-grid;place-items:center}
+.nav-cta{display:none}
+.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--ink);padding:20px 18px 28px;border-bottom:1px solid #50635a;box-shadow:0 25px 35px #0003;flex-direction:column;align-items:stretch;gap:20px}
+.nav-links.open{display:flex}
+.section{padding:75px 0}
+.hero-grid{grid-template-columns:1fr;min-height:0}
+.hero-main{padding:72px 0 14px}
+.hero h1{font-size:clamp(52px,11vw,78px)}
+.hero-foot{margin-top:35px;flex-wrap:wrap}
+.hero-visual{height:335px;margin-top:0;overflow:hidden}.hero-visual:before{inset:0 -30px 0 10%;}.hero-symbol{width:48%;max-width:240px}.chip-one{left:10%;top:16px}.chip-two{right:8%;bottom:18px}
+.intro-inner{display:block}.intro-tags{margin-top:14px;gap:12px 22px}
+.services-grid,.philosophy-grid,.process-grid,.about-grid,.contact-panel{grid-template-columns:1fr}
+.proof-grid{grid-template-columns:1fr}.proof{min-height:260px}
+.about-mark{min-height:260px}.about-mark svg{width:30%}
+.evidence-footer{display:block}.evidence-footer .btn{margin-top:18px}
+.contact{padding-top:78px}.contact-action{margin-left:0;max-width:100%;margin-top:18px}
+.contact h2{font-size:clamp(49px,10vw,73px)}
+}
+@media(max-width:420px){h1{font-size:50px}.hero-actions .btn{width:100%}.service{padding:24px}.contact h2{font-size:48px}.chip-one{left:0}.chip-two{right:0}.proof strong{font-size:54px}.nav-actions{gap:8px}.lang{padding:7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="HALLEL home"><img src="assets/logo.svg" alt="HALLEL"></a>
+    <nav class="nav-links" id="navlinks" aria-label="Main navigation">
+      <a href="#expertise" data-en="Expertise" data-es="Servicios">Expertise</a>
+      <a href="#evidence" data-en="Evidence" data-es="Resultados">Evidence</a>
+      <a href="#approach" data-en="Approach" data-es="Método">Approach</a>
+      <a href="#studio" data-en="Studio" data-es="Estudio">Studio</a>
+      <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang" id="langBtn" type="button" aria-label="Switch to Spanish">ES</button>
+      <a class="nav-cta" href="#contact" data-en="Let's talk ↗" data-es="Hablemos ↗">Let's talk ↗</a>
+      <button class="menu" id="menuBtn" type="button" aria-controls="navlinks" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+ <div class="wrap hero-grid">
+  <div class="hero-main">
+   <span class="kicker light">HALLEL / COMMERCE &amp; GROWTH</span>
+   <h1 id="hero-title"><span data-en="Better commerce." data-es="Mejor comercio.">Better commerce.</span><br><em data-en="Measurable growth." data-es="Crecimiento medible.">Measurable growth.</em></h1>
+   <p class="lead" data-en="We help ambitious Shopify brands turn friction into clarity—and clarity into better shopping experiences, smarter experiments, and sustainable growth." data-es="Ayudamos a marcas Shopify a transformar la fricción en claridad, y esa claridad en mejores experiencias de compra, experimentos inteligentes y crecimiento sostenible.">We help ambitious Shopify brands turn friction into clarity—and clarity into better shopping experiences, smarter experiments, and sustainable growth.</p>
+   <div class="hero-actions">
+     <a class="btn btn-signal" href="https://calendar.app.google/Kow2h5aXdG1etRm98" target="_blank" rel="noopener noreferrer"><span data-en="Book a strategy call" data-es="Agenda una llamada estratégica">Book a strategy call</span><span aria-hidden="true">↗</span></a>
+     <a class="btn btn-line" href="#evidence"><span data-en="Explore the evidence" data-es="Explora los resultados">Explore the evidence</span><span aria-hidden="true">↓</span></a>
+   </div>
+   <div class="hero-foot"><span>SHOPIFY</span><span>CRO / UX</span><span>LIFECYCLE</span></div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="data-chip chip-one"><span>INSIGHT</span><b>→ ACTION</b></div>
+    <svg class="hero-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116 116"><path d="M 13 102 L 34 102 L 56 10 L 35 10 Z M 74 102 L 95 102 L 117 10 L 96 10 Z M 34 48 L 91 48 L 85 66 L 29 66 Z" fill="#C8F36B"/></svg>
+    <div class="data-chip chip-two"><span>INTENTION</span><b>→ IMPACT</b></div>
+  </div>
+ </div>
+</section>
+<div class="intro-band"><div class="wrap intro-inner"><b data-en="Strategy before aesthetics. Evidence before assumptions." data-es="Estrategia antes que estética. Evidencia antes que suposiciones.">Strategy before aesthetics. Evidence before assumptions.</b><div class="intro-tags"><span>MEXICO</span><span>US</span><span>LATAM</span><span>REMOTE-FIRST</span></div></div></div>
+<section class="section" id="expertise">
+ <div class="wrap">
+   <div class="sec-head"><div><span class="kicker" data-en="01 / EXPERTISE" data-es="01 / SERVICIOS">01 / EXPERTISE</span><h2 data-en="Specialists.<br>Not generalists." data-es="Especialistas.<br>No generalistas.">Specialists.<br>Not generalists.</h2></div><p class="copy" data-en="A focused set of capabilities for stores that need better decisions, not another list of random changes." data-es="Capacidades especializadas para tiendas que necesitan mejores decisiones, no otra lista de cambios sin dirección.">A focused set of capabilities for stores that need better decisions, not another list of random changes.</p></div>
+   <div class="services-grid">
+    <article class="service"><div><div class="service-top"><span class="service-number">01 / SHOPIFY</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="19" rx="2"/><path d="M10 11V6a6 6 0 0 1 12 0v5M5 15h22"/></svg></div></div><h3 data-en="Shopify experiences" data-es="Experiencias Shopify">Shopify experiences</h3><p data-en="Storefront design, theme implementation, high-performing landing pages, merchandising and checkout-adjacent improvements." data-es="Diseño de tiendas, implementación de themes, landings comerciales, merchandising y mejoras en la experiencia de compra.">Storefront design, theme implementation, high-performing landing pages, merchandising and checkout-adjacent improvements.</p></div><div class="service-bottom"><span data-en="BUILD / REDESIGN / OPTIMIZE" data-es="CREAR / REDISEÑAR / OPTIMIZAR">BUILD / REDESIGN / OPTIMIZE</span><span>↗</span></div></article>
+    <article class="service"><div><div class="service-top"><span class="service-number">02 / CRO</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 25V17m7 8V11m7 14V15m7 10V5M3 27h26"/></svg></div></div><h3 data-en="CRO & experimentation" data-es="CRO y experimentación">CRO & experimentation</h3><p data-en="Funnel diagnosis, user behavior analysis, prioritized hypotheses, A/B testing and conversion-focused iteration." data-es="Diagnóstico del funnel, análisis del comportamiento, hipótesis priorizadas, pruebas A/B e iteraciones orientadas a conversión.">Funnel diagnosis, user behavior analysis, prioritized hypotheses, A/B testing and conversion-focused iteration.</p></div><div class="service-bottom"><span data-en="DIAGNOSE / TEST / LEARN" data-es="DIAGNOSTICAR / PROBAR / APRENDER">DIAGNOSE / TEST / LEARN</span><span>↗</span></div></article>
+    <article class="service"><div><div class="service-top"><span class="service-number">03 / LIFECYCLE</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="3"/><path d="m4 10 12 9 12-9"/></svg></div></div><h3 data-en="Retention & lifecycle" data-es="Retención y lifecycle">Retention & lifecycle</h3><p data-en="Klaviyo flows, email campaign execution and lifecycle journeys that help brands create more relevant customer relationships." data-es="Flows de Klaviyo, ejecución de campañas de email y recorridos de retención para fortalecer las relaciones con clientes.">Klaviyo flows, email campaign execution and lifecycle journeys that help brands create more relevant customer relationships.</p></div><div class="service-bottom"><span>KLAVIYO / EMAIL / RETENTION</span><span>↗</span></div></article>
+    <article class="service"><div><div class="service-top"><span class="service-number">04 / PARTNERSHIPS</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m5 23 8-8 5 4 9-12M20 7h7v7"/></svg></div></div><h3 data-en="Ongoing growth partner" data-es="Acompañamiento continuo">Ongoing growth partner</h3><p data-en="A defined monthly roadmap, implementation capacity, measurement and transparent reporting—without promising outcomes we cannot control." data-es="Roadmap mensual definido, implementación, medición y reportes transparentes, sin prometer resultados que no controlamos.">A defined monthly roadmap, implementation capacity, measurement and transparent reporting—without promising outcomes we cannot control.</p></div><div class="service-bottom"><span data-en="MONTHLY COLLABORATION" data-es="COLABORACIÓN MENSUAL">MONTHLY COLLABORATION</span><span>↗</span></div></article>
+   </div>
+ </div>
+</section>
+<section class="section philosophy">
+ <div class="wrap philosophy-grid"><div><span class="kicker light" data-en="02 / PHILOSOPHY" data-es="02 / FILOSOFÍA">02 / PHILOSOPHY</span><h2><span data-en="Less noise." data-es="Menos ruido.">Less noise.</span><br><span class="serif" data-en="Better decisions." data-es="Mejores decisiones.">Better decisions.</span></h2><p data-en="HALLEL draws its name from the Hebrew tradition of praise. Our interpretation for business is simple: do excellent work, act with integrity, and keep progress intentional." data-es="HALLEL toma su nombre de la tradición hebrea de alabanza. Nuestra interpretación empresarial es sencilla: trabajar con excelencia, actuar con integridad y avanzar con intención.">HALLEL draws its name from the Hebrew tradition of praise. Our interpretation for business is simple: do excellent work, act with integrity, and keep progress intentional.</p></div>
+ <div class="principles">
+  <div class="principle"><span class="index">01</span><div><strong data-en="Integrity" data-es="Integridad">Integrity</strong><p data-en="We communicate what is known, and what still needs to be tested." data-es="Comunicamos lo que sabemos y lo que todavía debemos comprobar.">We communicate what is known, and what still needs to be tested.</p></div></div>
+  <div class="principle"><span class="index">02</span><div><strong data-en="Precision" data-es="Precisión">Precision</strong><p data-en="We make evidence-led choices using analytics and customer behavior." data-es="Tomamos decisiones con datos, análisis y comportamiento de clientes.">We make evidence-led choices using analytics and customer behavior.</p></div></div>
+  <div class="principle"><span class="index">03</span><div><strong data-en="Progress" data-es="Progreso">Progress</strong><p data-en="We implement, measure and learn—then improve again." data-es="Implementamos, medimos y aprendemos para volver a mejorar.">We implement, measure and learn—then improve again.</p></div></div>
+ </div></div>
+</section>
+<section class="section evidence" id="evidence">
+ <div class="wrap"><span class="kicker" data-en="03 / OBSERVED OUTCOMES" data-es="03 / RESULTADOS OBSERVADOS">03 / OBSERVED OUTCOMES</span><h2 data-en="Measured change.<br>Real context." data-es="Cambios medidos.<br>Contexto real.">Measured change.<br>Real context.</h2><p class="copy" data-en="Selected performance observations from projects previously presented in our founder's portfolio. Figures describe changes over specific periods, not isolated causal lift." data-es="Observaciones de desempeño de proyectos documentados previamente en el portafolio del fundador. Las cifras describen cambios durante periodos concretos, no incrementos causales aislados.">Selected performance observations from projects previously presented in our founder's portfolio. Figures describe changes over specific periods, not isolated causal lift.</p>
+ <div class="proof-grid">
+  <article class="proof"><small data-en="JEWELRY / FIRST MONTH" data-es="JOYERÍA / PRIMER MES">JEWELRY / FIRST MONTH</small><strong>+6%</strong><h3 data-en="Conversion rate change" data-es="Cambio en la tasa de conversión">Conversion rate change</h3><p data-en="Observed alongside a 36% increase in recorded sales in the same period." data-es="Observado junto a un incremento del 36% en ventas registradas durante ese periodo.">Observed alongside a 36% increase in recorded sales in the same period.</p><span class="period" data-en="Period: first month · Portfolio case" data-es="Periodo: primer mes · Caso del portafolio">Period: first month · Portfolio case</span></article>
+  <article class="proof"><small data-en="HEALTHY FOOD / FIRST MONTH" data-es="ALIMENTOS SALUDABLES / PRIMER MES">HEALTHY FOOD / FIRST MONTH</small><strong>+30%</strong><h3 data-en="Recorded sales change" data-es="Cambio en ventas registradas">Recorded sales change</h3><p data-en="Conversion rate changed +1.5% over the reported comparison period." data-es="La tasa de conversión registró un cambio de +1.5% en el periodo comparado.">Conversion rate changed +1.5% over the reported comparison period.</p><span class="period" data-en="Period: first month · Portfolio case" data-es="Periodo: primer mes · Caso del portafolio">Period: first month · Portfolio case</span></article>
+  <article class="proof"><small data-en="SUPPLEMENTS / NINE MONTHS" data-es="SUPLEMENTOS / NUEVE MESES">SUPPLEMENTS / NINE MONTHS</small><strong>+44%</strong><h3 data-en="Conversion rate change" data-es="Cambio en la tasa de conversión">Conversion rate change</h3><p data-en="Conversion changed from 0.59% to 0.85% in the nine-month comparison." data-es="La conversión pasó de 0.59% a 0.85% en la comparación de nueve meses.">Conversion changed from 0.59% to 0.85% in the nine-month comparison.</p><span class="period" data-en="Period: nine months · Portfolio case" data-es="Periodo: nueve meses · Caso del portafolio">Period: nine months · Portfolio case</span></article>
+ </div>
+ <div class="evidence-footer"><p class="note" data-en="Source: performance figures from the existing personal portfolio. No control group or independent verification is presented here; multiple business factors may affect the changes." data-es="Fuente: cifras de desempeño del portafolio personal existente. Aquí no se presenta grupo de control ni verificación independiente; diversos factores comerciales pueden influir en los cambios.">Source: performance figures from the existing personal portfolio. No control group or independent verification is presented here; multiple business factors may affect the changes.</p><a class="btn btn-dark" href="#contact"><span data-en="Discuss your opportunity" data-es="Revisemos tu oportunidad">Discuss your opportunity</span> ↗</a></div>
+ </div>
+</section>
+<section class="section" id="approach">
+ <div class="wrap process-grid"><div><span class="kicker" data-en="04 / OUR METHOD" data-es="04 / NUESTRO MÉTODO">04 / OUR METHOD</span><h2 data-en="A clear path<br>to better." data-es="Un camino claro<br>para mejorar.">A clear path<br>to better.</h2><p class="copy" data-en="No redesign for the sake of redesign. Every recommendation starts with a question worth investigating." data-es="No rediseñamos por rediseñar. Cada recomendación comienza con una pregunta que vale la pena investigar.">No redesign for the sake of redesign. Every recommendation starts with a question worth investigating.</p></div>
+ <div class="steps">
+ <article class="step"><small>01</small><div><h3 data-en="Understand" data-es="Entender">Understand</h3><p data-en="Business context, customer behavior, funnel performance and technical constraints." data-es="Contexto de negocio, comportamiento del usuario, funnel y restricciones técnicas.">Business context, customer behavior, funnel performance and technical constraints.</p></div></article>
+ <article class="step"><small>02</small><div><h3 data-en="Prioritize" data-es="Priorizar">Prioritize</h3><p data-en="Turn observations into hypotheses ranked by evidence, potential impact and effort." data-es="Convertimos observaciones en hipótesis ordenadas por evidencia, impacto potencial y esfuerzo.">Turn observations into hypotheses ranked by evidence, potential impact and effort.</p></div></article>
+ <article class="step"><small>03</small><div><h3 data-en="Build & test" data-es="Construir y probar">Build & test</h3><p data-en="Implement practical improvements and run experiments when traffic and conditions support them." data-es="Implementamos mejoras y ejecutamos experimentos cuando el tráfico y las condiciones lo permiten.">Implement practical improvements and run experiments when traffic and conditions support them.</p></div></article>
+ <article class="step"><small>04</small><div><h3 data-en="Measure & learn" data-es="Medir y aprender">Measure & learn</h3><p data-en="Review results, recognize uncertainty and decide what deserves attention next." data-es="Revisamos resultados, reconocemos incertidumbre y decidimos qué merece atención después.">Review results, recognize uncertainty and decide what deserves attention next.</p></div></article>
+ </div></div>
+</section>
+<section class="section about" id="studio">
+ <div class="wrap about-grid"><div class="about-mark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116 116"><path d="M 13 102 L 34 102 L 56 10 L 35 10 Z M 74 102 L 95 102 L 117 10 L 96 10 Z M 34 48 L 91 48 L 85 66 L 29 66 Z" fill="#C8F36B"/></svg></div><div class="about-copy"><span class="kicker" data-en="05 / THE STUDIO" data-es="05 / EL ESTUDIO">05 / THE STUDIO</span><h2 data-en="Boutique by design.<br>Focused by choice." data-es="Boutique por diseño.<br>Especialistas por elección.">Boutique by design.<br>Focused by choice.</h2><p class="copy" data-en="HALLEL is built as a focused commerce and growth practice—clear scopes, direct collaboration, and hands-on technical execution. We work with teams that care about what actually improves the customer experience." data-es="HALLEL nace como un estudio especializado en comercio y crecimiento: alcances claros, colaboración directa y ejecución técnica real. Trabajamos con equipos que se preocupan por mejorar verdaderamente la experiencia de compra.">HALLEL is built as a focused commerce and growth practice—clear scopes, direct collaboration, and hands-on technical execution. We work with teams that care about what actually improves the customer experience.</p><div class="signature"><div><b data-en="Founded by Oscar Barrueta" data-es="Fundada por Oscar Barrueta">Founded by Oscar Barrueta</b><br><span data-en="Shopify & CRO Strategist" data-es="Estratega Shopify y CRO">Shopify & CRO Strategist</span></div></div></div></div>
+</section>
+<section class="section" id="questions"><div class="wrap"><span class="kicker" data-en="06 / GOOD QUESTIONS" data-es="06 / PREGUNTAS FRECUENTES">06 / GOOD QUESTIONS</span><h2 data-en="Before we begin." data-es="Antes de empezar.">Before we begin.</h2><div class="faq-list">
+ <details><summary data-en="Do you work only with Shopify?" data-es="¿Trabajan únicamente con Shopify?">Do you work only with Shopify?</summary><p data-en="Shopify is our core expertise. If your stack differs, we can review the opportunity and be transparent about fit." data-es="Shopify es nuestra especialidad. Si tu tecnología es diferente, revisamos el caso y te decimos con claridad si somos el equipo adecuado.">Shopify is our core expertise. If your stack differs, we can review the opportunity and be transparent about fit.</p></details>
+ <details><summary data-en="Can you implement improvements or only audit?" data-es="¿También implementan mejoras o solo hacen auditorías?">Can you implement improvements or only audit?</summary><p data-en="Both. Depending on scope, we can audit, design, implement, measure and support ongoing iteration." data-es="Ambas. Según el alcance, podemos auditar, diseñar, implementar, medir y acompañar la mejora continua.">Both. Depending on scope, we can audit, design, implement, measure and support ongoing iteration.</p></details>
+ <details><summary data-en="Do you work on projects or monthly retainers?" data-es="¿Trabajan por proyecto o por mensualidad?">Do you work on projects or monthly retainers?</summary><p data-en="Both. Store builds and audits can be scoped as projects; ongoing CRO and lifecycle work typically suit monthly collaboration." data-es="Ambas modalidades. Una tienda o auditoría puede resolverse por proyecto; CRO y lifecycle suelen funcionar mejor como colaboración mensual.">Both. Store builds and audits can be scoped as projects; ongoing CRO and lifecycle work typically suit monthly collaboration.</p></details>
+ <details><summary data-en="Can you collaborate with our internal team?" data-es="¿Pueden colaborar con nuestro equipo interno?">Can you collaborate with our internal team?</summary><p data-en="Yes. We can complement your designers, developers and marketers with a specialist commerce perspective." data-es="Sí. Podemos complementar a tus diseñadores, desarrolladores y equipo de marketing con experiencia especializada en comercio digital.">Yes. We can complement your designers, developers and marketers with a specialist commerce perspective.</p></details>
+</div></div></section>
+<section class="contact" id="contact">
+ <div class="wrap contact-panel"><div><span class="kicker light" data-en="07 / LET'S BUILD BETTER" data-es="07 / CONSTRUYAMOS ALGO MEJOR">07 / LET'S BUILD BETTER</span><h2><span data-en="Growth with" data-es="Crecimiento con">Growth with</span><br><span class="serif" data-en="intention." data-es="intención.">intention.</span></h2><p data-en="Tell us what you're building or where your store feels stuck. We'll start with a clear conversation about priorities and fit." data-es="Cuéntanos qué estás construyendo o dónde se está frenando tu tienda. Empezaremos con una conversación clara sobre prioridades y posibilidades.">Tell us what you're building or where your store feels stuck. We'll start with a clear conversation about priorities and fit.</p></div><div class="contact-action">
+ <a class="btn btn-signal" href="https://calendar.app.google/Kow2h5aXdG1etRm98" target="_blank" rel="noopener noreferrer"><span data-en="Book a discovery call" data-es="Agenda una llamada inicial">Book a discovery call</span> ↗</a>
+ <a class="btn btn-line" href="https://wa.me/5215529365784?text=Hola%2C%20vi%20el%20sitio%20de%20HALLEL%20y%20quiero%20conversar%20sobre%20mi%20tienda." target="_blank" rel="noopener noreferrer"><span data-en="Message us on WhatsApp" data-es="Escríbenos por WhatsApp">Message us on WhatsApp</span> ↗</a>
+ <small data-en="We use the existing booking and contact channels from the founder's portfolio while HALLEL's dedicated channels are set up." data-es="Temporalmente usamos los canales de contacto existentes del portafolio del fundador mientras se habilitan los canales propios de HALLEL.">We use the existing booking and contact channels from the founder's portfolio while HALLEL's dedicated channels are set up.</small></div></div>
+</section>
+</main>
+<footer><div class="wrap footer-grid"><a href="#top" aria-label="HALLEL home"><img src="assets/logo.svg" alt="HALLEL"></a><small>© <span id="year">2026</span> HALLEL. Commerce &amp; Growth Studio.</small><a href="#top" class="footer-link" data-en="Back to top ↑" data-es="Volver arriba ↑">Back to top ↑</a></div></footer>
+<script>
+(function(){
+"use strict";
+const btn=document.getElementById("menuBtn"),menu=document.getElementById("navlinks"),lang=document.getElementById("langBtn");
+btn.addEventListener("click",function(){const open=menu.classList.toggle("open");btn.setAttribute("aria-expanded",String(open));btn.setAttribute("aria-label",open?"Close menu":"Open menu");});
+menu.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){menu.classList.remove("open");btn.setAttribute("aria-expanded","false");});});
+lang.addEventListener("click",function(){
+ const next=document.documentElement.lang==="en"?"es":"en";
+ document.documentElement.lang=next;
+ document.querySelectorAll("[data-en][data-es]").forEach(function(el){
+  const val=el.getAttribute("data-"+next);
+  if(el.tagName==="H1"||el.tagName==="H2")el.innerHTML=val;else el.textContent=val;
+ });
+ lang.textContent=next==="en"?"ES":"EN";
+ lang.setAttribute("aria-label",next==="en"?"Switch to Spanish":"Cambiar a inglés");
+ btn.setAttribute("aria-label",next==="en"?"Open menu":"Abrir menú");
+});
+document.getElementById("year").textContent=String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>

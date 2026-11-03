@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#151B1C">
-<meta name="description" content="HALLEL is a boutique Shopify and CRO studio. We help ambitious commerce teams find friction, build better shopping experiences and grow through evidence-led decisions.">
+<meta name="description" content="HALLEL es un estudio boutique especializado en Shopify, CRO y experiencias digitales. Ayudamos a marcas a crear, rediseñar y optimizar experiencias de comercio con decisiones basadas en evidencia.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="HALLEL — Better commerce. Measurable growth.">
-<meta property="og:description" content="Shopify, CRO, experimentation and lifecycle strategy for ambitious commerce teams.">
+<meta property="og:description" content="Shopify, CRO y experiencias digitales para marcas que quieren vender mejor online.">
 <meta property="og:image" content="assets/icon.svg">
-<title>HALLEL — Commerce &amp; Growth Studio</title>
+<title>HALLEL — Shopify, CRO y experiencias digitales</title>
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +72,7 @@ h3{font-size:clamp(23px,2.2vw,32px);font-weight:800;line-height:1.15}
 .services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .service{background:#fff;border:1px solid var(--line);border-radius:10px;min-height:295px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .15s}
 .service:hover{transform:translateY(-3px)}
+.service.featured{grid-column:1/-1;min-height:235px}
 .service-top{display:flex;justify-content:space-between;align-items:start}
 .service-number{color:var(--moss);font-size:12px;font-weight:800;letter-spacing:.15em}
 .service-icon{width:51px;height:51px;border:1px solid var(--line);display:grid;place-items:center;border-radius:8px;background:#eef3ec}
@@ -79,6 +80,7 @@ h3{font-size:clamp(23px,2.2vw,32px);font-weight:800;line-height:1.15}
 .service h3{font-size:30px;margin:25px 0 12px}
 .service p{color:var(--sub);font-size:15px;max-width:430px;margin-bottom:15px}
 .service-bottom{padding-top:19px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--moss);font-size:12px;font-weight:800;letter-spacing:.04em}
+.brands{background:var(--paper)}.brands-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.brand-tile{min-height:82px;background:#fff;border:1px solid var(--line);border-radius:9px;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;font-size:14px;font-weight:800;color:var(--moss)}.brands-note{margin-top:18px}@media(max-width:900px){.brands-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:560px){.brands-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.brand-tile{min-height:70px}}
 .philosophy{background:var(--ink);color:var(--paper)}
 .philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:9vw;align-items:center}
 .philosophy h2{margin-bottom:28px}
@@ -153,7 +155,7 @@ footer{background:var(--ink);color:#c4d0c9}
 .hero-foot{margin-top:35px;flex-wrap:wrap}
 .hero-visual{height:335px;margin-top:0;overflow:hidden}.hero-visual:before{inset:0 -30px 0 10%;}.hero-symbol{width:48%;max-width:240px}.chip-one{left:10%;top:16px}.chip-two{right:8%;bottom:18px}
 .intro-inner{display:block}.intro-tags{margin-top:14px;gap:12px 22px}
-.services-grid,.philosophy-grid,.process-grid,.about-grid,.contact-panel{grid-template-columns:1fr}
+.services-grid,.philosophy-grid,.process-grid,.about-grid,.contact-panel{grid-template-columns:1fr}.service.featured{grid-column:auto}
 .proof-grid{grid-template-columns:1fr}.proof{min-height:260px}
 .about-mark{min-height:260px}.about-mark svg{width:30%}
 .evidence-footer{display:block}.evidence-footer .btn{margin-top:18px}
@@ -166,13 +168,14 @@ footer{background:var(--ink);color:#c4d0c9}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">Saltar al contenido</a>
 <header class="nav" id="top">
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="HALLEL home"><img src="assets/logo.svg" alt="HALLEL"></a>
     <nav class="nav-links" id="navlinks" aria-label="Main navigation">
       <a href="#expertise" data-en="Expertise" data-es="Servicios">Expertise</a>
-      <a href="#evidence" data-en="Evidence" data-es="Resultados">Evidence</a>
+      <a href="#brands" data-en="Brands" data-es="Marcas">Marcas</a>
+      <a href="#evidence" data-en="Evidence" data-es="Resultados">Resultados</a>
       <a href="#approach" data-en="Approach" data-es="Método">Approach</a>
       <a href="#studio" data-en="Studio" data-es="Estudio">Studio</a>
       <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
@@ -195,7 +198,7 @@ footer{background:var(--ink);color:#c4d0c9}
      <a class="btn btn-signal" href="https://calendar.app.google/Kow2h5aXdG1etRm98" target="_blank" rel="noopener noreferrer"><span data-en="Book a strategy call" data-es="Agenda una llamada estratégica">Book a strategy call</span><span aria-hidden="true">↗</span></a>
      <a class="btn btn-line" href="#evidence"><span data-en="Explore the evidence" data-es="Explora los resultados">Explore the evidence</span><span aria-hidden="true">↓</span></a>
    </div>
-   <div class="hero-foot"><span>SHOPIFY</span><span>CRO / UX</span><span>LIFECYCLE</span></div>
+   <div class="hero-foot"><span>SHOPIFY</span><span>CRO / UX</span><span>WEB</span></div>
   </div>
   <div class="hero-visual" aria-hidden="true">
     <div class="data-chip chip-one"><span>INSIGHT</span><b>→ ACTION</b></div>
@@ -209,15 +212,30 @@ footer{background:var(--ink);color:#c4d0c9}
  <div class="wrap">
    <div class="sec-head"><div><span class="kicker" data-en="01 / EXPERTISE" data-es="01 / SERVICIOS">01 / EXPERTISE</span><h2 data-en="Specialists.<br>Not generalists." data-es="Especialistas.<br>No generalistas.">Specialists.<br>Not generalists.</h2></div><p class="copy" data-en="A focused set of capabilities for stores that need better decisions, not another list of random changes." data-es="Capacidades especializadas para tiendas que necesitan mejores decisiones, no otra lista de cambios sin dirección.">A focused set of capabilities for stores that need better decisions, not another list of random changes.</p></div>
    <div class="services-grid">
-    <a class="service" href="servicios/shopify/" aria-label="Explore shopify service details"><div><div class="service-top"><span class="service-number">01 / SHOPIFY</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="19" rx="2"/><path d="M10 11V6a6 6 0 0 1 12 0v5M5 15h22"/></svg></div></div><h3 data-en="Shopify experiences" data-es="Experiencias Shopify">Shopify experiences</h3><p data-en="Storefront design, theme implementation, high-performing landing pages, merchandising and checkout-adjacent improvements." data-es="Diseño de tiendas, implementación de themes, landings comerciales, merchandising y mejoras en la experiencia de compra.">Storefront design, theme implementation, high-performing landing pages, merchandising and checkout-adjacent improvements.</p></div><div class="service-bottom"><span data-en="BUILD / REDESIGN / OPTIMIZE" data-es="CREAR / REDISEÑAR / OPTIMIZAR">BUILD / REDESIGN / OPTIMIZE</span><span data-en="Explore service ↗" data-es="Ver servicio ↗">Explore service ↗</span></div></a>
-    <a class="service" href="servicios/cro/" aria-label="Explore cro service details"><div><div class="service-top"><span class="service-number">02 / CRO</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 25V17m7 8V11m7 14V15m7 10V5M3 27h26"/></svg></div></div><h3 data-en="CRO & experimentation" data-es="CRO y experimentación">CRO & experimentation</h3><p data-en="Funnel diagnosis, user behavior analysis, prioritized hypotheses, A/B testing and conversion-focused iteration." data-es="Diagnóstico del funnel, análisis del comportamiento, hipótesis priorizadas, pruebas A/B e iteraciones orientadas a conversión.">Funnel diagnosis, user behavior analysis, prioritized hypotheses, A/B testing and conversion-focused iteration.</p></div><div class="service-bottom"><span data-en="DIAGNOSE / TEST / LEARN" data-es="DIAGNOSTICAR / PROBAR / APRENDER">DIAGNOSE / TEST / LEARN</span><span data-en="Explore service ↗" data-es="Ver servicio ↗">Explore service ↗</span></div></a>
-    <a class="service" href="servicios/lifecycle/" aria-label="Explore lifecycle service details"><div><div class="service-top"><span class="service-number">03 / LIFECYCLE</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="3"/><path d="m4 10 12 9 12-9"/></svg></div></div><h3 data-en="Retention & lifecycle" data-es="Retención y lifecycle">Retention & lifecycle</h3><p data-en="Klaviyo flows, email campaign execution and lifecycle journeys that help brands create more relevant customer relationships." data-es="Flows de Klaviyo, ejecución de campañas de email y recorridos de retención para fortalecer las relaciones con clientes.">Klaviyo flows, email campaign execution and lifecycle journeys that help brands create more relevant customer relationships.</p></div><div class="service-bottom"><span>KLAVIYO / EMAIL / RETENTION</span><span data-en="Explore service ↗" data-es="Ver servicio ↗">Explore service ↗</span></div></a>
-    <a class="service" href="servicios/growth/" aria-label="Explore growth service details"><div><div class="service-top"><span class="service-number">04 / PARTNERSHIPS</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m5 23 8-8 5 4 9-12M20 7h7v7"/></svg></div></div><h3 data-en="Ongoing growth partner" data-es="Acompañamiento continuo">Ongoing growth partner</h3><p data-en="A defined monthly roadmap, implementation capacity, measurement and transparent reporting—without promising outcomes we cannot control." data-es="Roadmap mensual definido, implementación, medición y reportes transparentes, sin prometer resultados que no controlamos.">A defined monthly roadmap, implementation capacity, measurement and transparent reporting—without promising outcomes we cannot control.</p></div><div class="service-bottom"><span data-en="MONTHLY COLLABORATION" data-es="COLABORACIÓN MENSUAL">MONTHLY COLLABORATION</span><span data-en="Explore service ↗" data-es="Ver servicio ↗">Explore service ↗</span></div></a>
+    <a class="service" href="servicios/creacion-shopify/" aria-label="Ver servicio de creación de tiendas Shopify"><div><div class="service-top"><span class="service-number">01 / SHOPIFY</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="19" rx="2"/><path d="M10 11V6a6 6 0 0 1 12 0v5M5 15h22"/></svg></div></div><h3 data-es="Creación de tiendas Shopify" data-en="Shopify store creation">Creación de tiendas Shopify</h3><p data-es="Para marcas que todavía no tienen una tienda ecommerce adecuada. Construimos la base completa: estructura, catálogo, navegación, pagos, envíos y experiencia mobile-first." data-en="For brands that do not yet have a proper ecommerce store. We build the foundation: structure, catalogue, navigation, payments, shipping and a mobile-first buying experience.">Para marcas que todavía no tienen una tienda ecommerce adecuada. Construimos la base completa: estructura, catálogo, navegación, pagos, envíos y experiencia mobile-first.</p></div><div class="service-bottom"><span data-es="DESDE CERO / SHOPIFY 2.0" data-en="FROM SCRATCH / SHOPIFY 2.0">DESDE CERO / SHOPIFY 2.0</span><span data-es="Ver servicio ↗" data-en="Explore service ↗">Ver servicio ↗</span></div></a>
+
+    <a class="service" href="servicios/cro-sprint/" aria-label="Ver servicio Shopify CRO Sprint"><div><div class="service-top"><span class="service-number">02 / CRO SPRINT</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 24 12 17l5 4 10-13M20 8h7v7"/></svg></div></div><h3 data-es="Shopify CRO Sprint" data-en="Shopify CRO Sprint">Shopify CRO Sprint</h3><p data-es="Para una fricción concreta que no requiere reconstruir toda la tienda. Concentramos diagnóstico, diseño e implementación en una o dos áreas prioritarias del journey." data-en="For a focused problem that does not require rebuilding the whole store. We concentrate diagnosis, design and implementation on one or two priority areas of the journey.">Para una fricción concreta que no requiere reconstruir toda la tienda. Concentramos diagnóstico, diseño e implementación en una o dos áreas prioritarias del journey.</p></div><div class="service-bottom"><span data-es="FOCO / IMPLEMENTACIÓN / QA" data-en="FOCUS / IMPLEMENTATION / QA">FOCO / IMPLEMENTACIÓN / QA</span><span data-es="Ver servicio ↗" data-en="Explore service ↗">Ver servicio ↗</span></div></a>
+
+    <a class="service" href="servicios/rediseno-shopify/" aria-label="Ver servicio de rediseño Shopify"><div><div class="service-top"><span class="service-number">03 / REDESIGN</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 6h22v20H5zM5 12h22M12 12v14"/></svg></div></div><h3 data-es="Rediseño Shopify basado en CRO" data-en="CRO-led Shopify redesign">Rediseño Shopify basado en CRO</h3><p data-es="Para tiendas donde el problema ya es estructural: navegación, Home, colecciones, PDP, carrito y mobile necesitan funcionar como un mismo sistema ecommerce." data-en="For stores where the problem is structural: navigation, Home, collections, PDP, cart and mobile need to work as one ecommerce system.">Para tiendas donde el problema ya es estructural: navegación, Home, colecciones, PDP, carrito y mobile necesitan funcionar como un mismo sistema ecommerce.</p></div><div class="service-bottom"><span data-es="ARQUITECTURA / UX / CRO" data-en="ARCHITECTURE / UX / CRO">ARQUITECTURA / UX / CRO</span><span data-es="Ver servicio ↗" data-en="Explore service ↗">Ver servicio ↗</span></div></a>
+
+    <a class="service" href="servicios/sitios-web/" aria-label="Ver servicio de sitios web profesionales"><div><div class="service-top"><span class="service-number">04 / WEB</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="20" rx="2"/><path d="M4 11h24M9 8.5h1M13 8.5h1"/></svg></div></div><h3 data-es="Sitios web profesionales" data-en="Professional websites">Sitios web profesionales</h3><p data-es="Para empresas, profesionales y campañas que necesitan una presencia digital clara sin montar un ecommerce. Sitios corporativos, portafolios, páginas informativas y landing pages." data-en="For companies, professionals and campaigns that need a clear digital presence without an ecommerce stack. Corporate sites, portfolios, informational websites and landing pages.">Para empresas, profesionales y campañas que necesitan una presencia digital clara sin montar un ecommerce. Sitios corporativos, portafolios, páginas informativas y landing pages.</p></div><div class="service-bottom"><span data-es="CORPORATIVO / LANDING / PORTAFOLIO" data-en="CORPORATE / LANDING / PORTFOLIO">CORPORATIVO / LANDING / PORTAFOLIO</span><span data-es="Ver servicio ↗" data-en="Explore service ↗">Ver servicio ↗</span></div></a>
+
+    <a class="service featured" href="servicios/cro-shopify/" aria-label="Ver servicio CRO más Shopify continuo"><div><div class="service-top"><span class="service-number">05 / CRO + SHOPIFY</span><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 25V17m7 8V11m7 14V15m7 10V5M3 27h26"/></svg></div></div><h3 data-es="CRO + Shopify continuo" data-en="Ongoing CRO + Shopify">CRO + Shopify continuo</h3><p data-es="Para tiendas activas que necesitan mejorar con método. Analizamos Shopify y comportamiento real, priorizamos oportunidades, implementamos cambios y medimos qué debe ocurrir después." data-en="For active stores that need disciplined improvement. We analyse Shopify and real user behaviour, prioritise opportunities, implement changes and measure what should happen next.">Para tiendas activas que necesitan mejorar con método. Analizamos Shopify y comportamiento real, priorizamos oportunidades, implementamos cambios y medimos qué debe ocurrir después.</p></div><div class="service-bottom"><span data-es="ANALIZAR / IMPLEMENTAR / MEDIR" data-en="ANALYSE / IMPLEMENT / MEASURE">ANALIZAR / IMPLEMENTAR / MEDIR</span><span data-es="Ver servicio ↗" data-en="Explore service ↗">Ver servicio ↗</span></div></a>
+   </div>
    </div>
  </div>
 </section>
+<section class="section brands" id="brands">
+ <div class="wrap">
+  <div class="sec-head"><div><span class="kicker" data-es="02 / EXPERIENCIA" data-en="02 / EXPERIENCE">02 / EXPERIENCIA</span><h2 data-es="Marcas con las que<br>hemos trabajado." data-en="Brands we have<br>worked with.">Marcas con las que<br>hemos trabajado.</h2></div><p class="copy" data-es="Experiencia en ecommerce, Shopify, CRO, UX y ejecución digital para marcas de distintas categorías." data-en="Experience across ecommerce, Shopify, CRO, UX and digital execution for brands in different categories.">Experiencia en ecommerce, Shopify, CRO, UX y ejecución digital para marcas de distintas categorías.</p></div>
+  <div class="brands-grid">
+   <div class="brand-tile">Dogelthy</div><div class="brand-tile">Mubson</div><div class="brand-tile">Sleep Ritual</div><div class="brand-tile">Vitalbotanics</div><div class="brand-tile">Come Verde</div><div class="brand-tile">Amorasana</div><div class="brand-tile">Baby Up</div><div class="brand-tile">Infanti</div><div class="brand-tile">Health Hack</div><div class="brand-tile">Bloom Nutrition</div><div class="brand-tile">Biomiral</div><div class="brand-tile">Souls México</div><div class="brand-tile">Tula Mayoreo</div><div class="brand-tile">Klak Hats</div><div class="brand-tile">Hadorelle</div><div class="brand-tile">Clepsidra</div><div class="brand-tile">NOW</div><div class="brand-tile">Santory</div><div class="brand-tile">Marca de tequila</div><div class="brand-tile">Auga</div>
+  </div>
+  <p class="note brands-note" data-es="Selección de marcas documentadas previamente en el portafolio. El alcance y periodo de colaboración varía por proyecto." data-en="Selection of brands previously documented in the portfolio. Scope and collaboration period vary by project.">Selección de marcas documentadas previamente en el portafolio. El alcance y periodo de colaboración varía por proyecto.</p>
+ </div>
+</section>
 <section class="section philosophy">
- <div class="wrap philosophy-grid"><div><span class="kicker light" data-en="02 / PHILOSOPHY" data-es="02 / FILOSOFÍA">02 / PHILOSOPHY</span><h2><span data-en="Less noise." data-es="Menos ruido.">Less noise.</span><br><span class="serif" data-en="Better decisions." data-es="Mejores decisiones.">Better decisions.</span></h2><p data-en="We believe in practical progress: identify what matters, work with integrity, execute with precision and measure what changes." data-es="Creemos en el progreso tangible: identificar lo que importa, trabajar con integridad, ejecutar con precisión y medir los cambios.">We believe in practical progress: identify what matters, work with integrity, execute with precision and measure what changes.</p></div>
+ <div class="wrap philosophy-grid"><div><span class="kicker light" data-en="03 / PHILOSOPHY" data-es="03 / FILOSOFÍA">03 / FILOSOFÍA</span><h2><span data-en="Less noise." data-es="Menos ruido.">Less noise.</span><br><span class="serif" data-en="Better decisions." data-es="Mejores decisiones.">Better decisions.</span></h2><p data-en="We believe in practical progress: identify what matters, work with integrity, execute with precision and measure what changes." data-es="Creemos en el progreso tangible: identificar lo que importa, trabajar con integridad, ejecutar con precisión y medir los cambios.">We believe in practical progress: identify what matters, work with integrity, execute with precision and measure what changes.</p></div>
  <div class="principles">
   <div class="principle"><span class="index">01</span><div><strong data-en="Integrity" data-es="Integridad">Integrity</strong><p data-en="We communicate what is known, and what still needs to be tested." data-es="Comunicamos lo que sabemos y lo que todavía debemos comprobar.">We communicate what is known, and what still needs to be tested.</p></div></div>
   <div class="principle"><span class="index">02</span><div><strong data-en="Precision" data-es="Precisión">Precision</strong><p data-en="We make evidence-led choices using analytics and customer behavior." data-es="Tomamos decisiones con datos, análisis y comportamiento de clientes.">We make evidence-led choices using analytics and customer behavior.</p></div></div>
@@ -225,7 +243,7 @@ footer{background:var(--ink);color:#c4d0c9}
  </div></div>
 </section>
 <section class="section evidence" id="evidence">
- <div class="wrap"><span class="kicker" data-en="03 / OBSERVED OUTCOMES" data-es="03 / RESULTADOS OBSERVADOS">03 / OBSERVED OUTCOMES</span><h2 data-en="Measured change.<br>Real context." data-es="Cambios medidos.<br>Contexto real.">Measured change.<br>Real context.</h2><p class="copy" data-en="Selected performance observations from projects previously presented in our founder's portfolio. Figures describe changes over specific periods, not isolated causal lift." data-es="Observaciones de desempeño de proyectos documentados previamente en el portafolio del fundador. Las cifras describen cambios durante periodos concretos, no incrementos causales aislados.">Selected performance observations from projects previously presented in our founder's portfolio. Figures describe changes over specific periods, not isolated causal lift.</p>
+ <div class="wrap"><span class="kicker" data-en="04 / OBSERVED OUTCOMES" data-es="04 / RESULTADOS OBSERVADOS">04 / RESULTADOS OBSERVADOS</span><h2 data-en="Measured change.<br>Real context." data-es="Cambios medidos.<br>Contexto real.">Measured change.<br>Real context.</h2><p class="copy" data-en="Selected performance observations from projects previously presented in our founder's portfolio. Figures describe changes over specific periods, not isolated causal lift." data-es="Observaciones de desempeño de proyectos documentados previamente en el portafolio del fundador. Las cifras describen cambios durante periodos concretos, no incrementos causales aislados.">Selected performance observations from projects previously presented in our founder's portfolio. Figures describe changes over specific periods, not isolated causal lift.</p>
  <div class="proof-grid">
   <article class="proof"><small data-en="JEWELRY / FIRST MONTH" data-es="JOYERÍA / PRIMER MES">JEWELRY / FIRST MONTH</small><strong>+6%</strong><h3 data-en="Conversion rate change" data-es="Cambio en la tasa de conversión">Conversion rate change</h3><p data-en="Observed alongside a 36% increase in recorded sales in the same period." data-es="Observado junto a un incremento del 36% en ventas registradas durante ese periodo.">Observed alongside a 36% increase in recorded sales in the same period.</p><details class="proof-detail"><summary data-en="View analytics snapshot" data-es="Ver captura de Analytics">View analytics snapshot</summary><img src="../assets/results/jewelry.webp" alt="Shopify Analytics comparative chart for jewelry case" loading="lazy" width="700" height="494"></details><span class="period" data-en="Period: first month · Portfolio case" data-es="Periodo: primer mes · Caso del portafolio">Period: first month · Portfolio case</span></article>
   <article class="proof"><small data-en="HEALTHY FOOD / FIRST MONTH" data-es="ALIMENTOS SALUDABLES / PRIMER MES">HEALTHY FOOD / FIRST MONTH</small><strong>+30%</strong><h3 data-en="Recorded sales change" data-es="Cambio en ventas registradas">Recorded sales change</h3><p data-en="Conversion rate changed +1.5% over the reported comparison period." data-es="La tasa de conversión registró un cambio de +1.5% en el periodo comparado.">Conversion rate changed +1.5% over the reported comparison period.</p><details class="proof-detail"><summary data-en="View analytics snapshot" data-es="Ver captura de Analytics">View analytics snapshot</summary><img src="../assets/results/healthy-food.webp" alt="Shopify Analytics comparative chart for healthy food case" loading="lazy" width="700" height="494"></details><span class="period" data-en="Period: first month · Portfolio case" data-es="Periodo: primer mes · Caso del portafolio">Period: first month · Portfolio case</span></article>
@@ -268,18 +286,17 @@ btn.addEventListener("click",function(){const open=menu.classList.toggle("open")
 menu.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){menu.classList.remove("open");btn.setAttribute("aria-expanded","false");});});
 function setHallelLanguage(next){
  document.documentElement.lang=next;
- document.documentElement.lang=next;
  document.querySelectorAll("[data-en][data-es]").forEach(function(el){
   const val=el.getAttribute("data-"+next);
   if(el.tagName==="H1"||el.tagName==="H2")el.innerHTML=val;else el.textContent=val;
  });
- lang.textContent=next==="en"?"ES":"EN";
+ lang.textContent=next==="es"?"EN":"ES";
  lang.setAttribute("aria-label",next==="en"?"Switch to Spanish":"Cambiar a inglés");
  btn.setAttribute("aria-label",next==="en"?"Open menu":"Abrir menú");
  try{localStorage.setItem("hallel-lang",next)}catch(e){}
 }
 lang.addEventListener("click",function(){setHallelLanguage(document.documentElement.lang==="en"?"es":"en")});
-try{if(localStorage.getItem("hallel-lang")==="es")setHallelLanguage("es")}catch(e){}
+let initialLang="es";try{const saved=localStorage.getItem("hallel-lang");if(saved==="en"||saved==="es")initialLang=saved}catch(e){}setHallelLanguage(initialLang);
 document.getElementById("year").textContent=String(new Date().getFullYear());
 })();
 </script>

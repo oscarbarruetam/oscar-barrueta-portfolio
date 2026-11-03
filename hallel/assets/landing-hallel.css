@@ -1,0 +1,20 @@
+/* HALLEL visual skin for the existing, fully detailed service pages.
+   Scope, prices and documented examples are preserved from the original. */
+:root{--navy:#151B1C;--navy2:#244237;--ink:#151B1C;--paper:#F8F7F2;--ice:#E9EEE6;--line:#D9DDD7;--muted:#596A62;--lime:#C8F36B;--cobalt:#31584D;--white:#fff;--radius:16px}
+body{background:var(--paper);color:var(--ink)}
+.nav{background:rgba(21,27,28,.97);color:#F8F7F2;border-color:rgba(255,255,255,.12)}
+.navLinks a{color:#e2e8e1}.navLinks a:hover{color:var(--lime)}
+.navCta{background:var(--lime);color:var(--ink)!important}
+.brand{display:inline-flex;gap:10px;align-items:center}
+.brand img{width:166px;max-width:34vw;height:34px;object-fit:contain;object-position:left center}
+.hero{background:linear-gradient(125deg,#151B1C,#244237);color:#F8F7F2}
+.hero .eyebrow{color:#C8F36B}.heroLead{color:#DAE4DC}.heroFine{color:#C1CFC4}
+h1 em{color:var(--lime)}
+.btnAccent{background:var(--lime);color:var(--ink)}
+.btnDark{background:var(--ink);color:#fff}
+.btnOutline{border-color:#A6BBAE}
+.eyebrow{color:var(--moss,#31584D)}
+.card,.priceCard,.pricing,.package,.serviceCard{border-color:var(--line)}
+a:focus-visible,button:focus-visible{outline:3px solid #709B73;outline-offset:3px}
+.main-brand-note{padding:17px 21px;background:#e9eee6;border-left:4px solid #31584D;color:#3e584e;font-weight:650;font-size:13px;line-height:1.6}
+@media(max-width:700px){.brand img{width:128px;height:30px}.navInner{gap:10px}.navLinks{gap:10px;font-size:11px}.navCta{padding:9px 12px}.heroGrid{gap:24px}}

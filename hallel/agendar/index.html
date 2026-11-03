@@ -63,14 +63,14 @@ footer{padding:26px 0;background:#151B1C;color:#bdcbbf}.foot{display:flex;align-
 <div class="field"><label for="name"><span data-en="Your name *" data-es="Tu nombre *">Tu nombre *</span></label><input id="name" name="name" required autocomplete="name" maxlength="120" placeholder="Nombre"></div>
 <div class="field"><label for="business"><span data-en="Brand / business *" data-es="Marca / negocio *">Marca / negocio *</span></label><input id="business" name="business" required maxlength="120" placeholder="Marca"></div>
 <div class="field wide"><label for="website"><span data-en="Website or social profile" data-es="Sitio web o red social">Sitio web o red social</span></label><input id="website" name="website" maxlength="300" placeholder="https://..."></div>
-<div class="field wide"><label for="service"><span data-en="Service of interest *" data-es="Servicio de interés *">Servicio de interés *</span></label><select id="service" name="service" required>
-<option value="" data-en="Select a service" data-es="Elige un servicio">Elige un servicio</option>
-<option value="Rediseño Shopify" data-en="Shopify redesign" data-es="Rediseño Shopify">Rediseño Shopify</option>
-<option value="Creación Shopify" data-en="Shopify store creation" data-es="Creación Shopify">Creación Shopify</option>
-<option value="Sitios web y landing pages" data-en="Websites & landing pages" data-es="Sitios web y landing pages">Sitios web y landing pages</option>
-<option value="CRO + Shopify mensual" data-en="CRO + Shopify monthly" data-es="CRO + Shopify mensual">CRO + Shopify mensual</option>
-<option value="Klaviyo y lifecycle marketing" data-en="Klaviyo & lifecycle marketing" data-es="Klaviyo y lifecycle marketing">Klaviyo y lifecycle marketing</option>
+<div class="field wide"><label for="service"><span data-en="Capability of interest *" data-es="Capacidad de interés *">Capacidad de interés *</span></label><select id="service" name="service" required>
+<option value="" data-en="Select a capability" data-es="Elige una capacidad">Elige una capacidad</option>
+<option value="Shopify + CRO" data-en="Shopify + CRO" data-es="Shopify + CRO">Shopify + CRO</option>
+<option value="Klaviyo + Email" data-en="Klaviyo + Email" data-es="Klaviyo + Email">Klaviyo + Email</option>
+<option value="Google Ads" data-en="Google Ads" data-es="Google Ads">Google Ads</option>
+<option value="Web + Landing Pages" data-en="Web + Landing Pages" data-es="Sitios web + Landing Pages">Sitios web + Landing Pages</option>
 </select></div>
+<div class="field wide"><label for="subservice"><span data-en="Specific service or package (optional)" data-es="Servicio o modalidad específica (opcional)">Servicio o modalidad específica (opcional)</span></label><input id="subservice" name="subservice" maxlength="120" placeholder="Ej. Shopify CRO Sprint"></div>
 <div class="field"><label for="date"><span data-en="Preferred date *" data-es="Fecha preferida *">Fecha preferida *</span></label><input id="date" name="date" type="date" required></div>
 <div class="field"><label for="time"><span data-en="Preferred time *" data-es="Hora preferida *">Hora preferida *</span></label><input id="time" name="time" type="time" required></div>
 <div class="field wide"><label for="timezone"><span data-en="Your time zone / city *" data-es="Tu zona horaria / ciudad *">Tu zona horaria / ciudad *</span></label><input id="timezone" name="timezone" required maxlength="100" placeholder="Ciudad de México (UTC−6)"></div>
@@ -96,13 +96,21 @@ let lang="es";
 function changeLanguage(next){lang=next;document.documentElement.lang=next;document.querySelectorAll("[data-en][data-es]").forEach(el=>el.textContent=el.getAttribute("data-"+next));button.textContent=next==="es"?"EN":"ES";button.setAttribute("aria-label",next==="es"?"Switch to English":"Cambiar a español");try{localStorage.setItem("hallel-lang",next)}catch(e){}}
 button.addEventListener("click",()=>changeLanguage(lang==="es"?"en":"es"));
 let saved="";try{saved=localStorage.getItem("hallel-lang")||""}catch(e){}
-changeLanguage(saved==="en"?"en":saved==="es"?"es":(navigator.language||"").toLowerCase().startsWith("es")?"es":"en");
+changeLanguage(saved==="en"?"en":"es");
+try{
+ const params=new URLSearchParams(window.location.search);
+ const original=params.get("servicio")||"";
+ const aliases={"Rediseño Shopify":"Shopify + CRO","Creación Shopify":"Shopify + CRO","CRO + Shopify mensual":"Shopify + CRO","Klaviyo y lifecycle marketing":"Klaviyo + Email","Sitios web y landing pages":"Web + Landing Pages","Web + Landing Pages":"Web + Landing Pages"};
+ const wanted=aliases[original]||original;const control=document.getElementById("service");
+ if(Array.from(control.options).some(opt=>opt.value===wanted))control.value=wanted;
+ const sub=params.get("subservicio");if(sub)document.getElementById("subservice").value=sub.slice(0,120);
+}catch(e){}
 form.addEventListener("submit",function(e){
 e.preventDefault();if(!form.reportValidity())return;
 const data=new FormData(form);const lines=[
 "Hola HALLEL, quiero solicitar una llamada estratégica.",
 "Nombre: "+data.get("name"),"Marca: "+data.get("business"),"Web/red social: "+(data.get("website")||"No compartida"),
-"Servicio: "+data.get("service"),"Fecha preferida: "+data.get("date"),"Hora preferida: "+data.get("time"),
+"Capacidad: "+data.get("service"),"Servicio/modalidad: "+(data.get("subservice")||"Por definir"),"Fecha preferida: "+data.get("date"),"Hora preferida: "+data.get("time"),
 "Zona horaria/ciudad: "+data.get("timezone"),"Contexto: "+(data.get("context")||"Por conversar"),
 "Entiendo que la reunión aún requiere confirmación."
 ];const url="https://wa.me/5215529365784?text="+encodeURIComponent(lines.join("\n"));window.open(url,"_blank","noopener,noreferrer");

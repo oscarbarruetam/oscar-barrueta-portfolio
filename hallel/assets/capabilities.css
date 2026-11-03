@@ -186,3 +186,15 @@ html.modals-ready .service-dialog .service-chapter{display:block}
 .web-example{min-width:0;overflow:hidden}
 .example-dialog{overflow-y:auto;overflow-x:hidden}
 .example-dialog img{display:block;width:100%;max-width:100%;height:auto;max-height:none;object-fit:contain;object-position:top center}
+
+/* Connected services: three individual areas plus HALLEL Growth as a highlighted integrated offer. */
+.connected-services .connected-links{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:12px}
+.connected-services .connected-links .cap-jump{min-height:184px}
+.connected-services .growth-related{background:#234538;border-color:#31584D;color:#F8F7F2}
+.connected-services .growth-related:hover{border-color:#8fc079;background:#294e3e}
+.connected-services .growth-related small{color:#C8F36B;font-size:10px;letter-spacing:.08em;line-height:1.35}
+.connected-services .growth-related b{font-size:21px;color:#fff}
+.connected-services .growth-related .jump-price{color:#C8F36B;font-size:18px;font-weight:850}
+.connected-services .growth-related .jump-arrow{color:#C8F36B}
+@media(max-width:1050px){.connected-services .connected-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.connected-services .connected-links{grid-template-columns:1fr}.connected-services .connected-links .cap-jump{min-height:125px}}

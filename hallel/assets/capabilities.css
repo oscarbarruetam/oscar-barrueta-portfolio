@@ -178,3 +178,11 @@ html.modals-ready .service-dialog .service-chapter{display:block}
  .evidence-footer .button{margin-top:16px;white-space:normal;width:100%}
 }
 @media(prefers-reduced-motion:reduce){.cap-jump,.web-example-thumb img{transition:none}}
+
+/* Show complete web mockups at every viewport: never crop the source artwork. */
+.web-example-thumb{height:auto;min-height:0;display:block;line-height:0;overflow:visible;background:#f1f4ef}
+.web-example-thumb img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center;transform:none;transition:none}
+.web-example-thumb:hover img{transform:none}
+.web-example{min-width:0;overflow:hidden}
+.example-dialog{overflow-y:auto;overflow-x:hidden}
+.example-dialog img{display:block;width:100%;max-width:100%;height:auto;max-height:none;object-fit:contain;object-position:top center}

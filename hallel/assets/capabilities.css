@@ -198,3 +198,19 @@ html.modals-ready .service-dialog .service-chapter{display:block}
 .connected-services .growth-related .jump-arrow{color:#C8F36B}
 @media(max-width:1050px){.connected-services .connected-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.connected-services .connected-links{grid-template-columns:1fr}.connected-services .connected-links .cap-jump{min-height:125px}}
+
+/* WooCommerce migration: clear fixed-price scope, service differences and FAQs */
+.cap-jump .jump-summary{font-size:12px;line-height:1.55;color:#53695e;display:block;font-weight:450}
+.migration-comparison .comparison-intro{margin:6px 0 19px;font-size:13px;line-height:1.65;color:#52695e}
+.migration-compare-list{display:grid;grid-template-columns:1fr;gap:0}
+.migration-compare-item{padding:15px 0;border-top:1px solid var(--line)}
+.migration-compare-item small{font-size:10px;letter-spacing:.1em;color:var(--moss);font-weight:850}
+.migration-compare-item .compare-title{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:5px 0}
+.migration-compare-item .compare-title strong{font-size:15px;letter-spacing:-.025em}
+.migration-compare-item .compare-title b{white-space:nowrap;color:var(--moss);font-size:13px}
+.migration-compare-item p{margin:0;color:#5d6f62;font-size:12px;line-height:1.6}
+.migration-faq details{border-top:1px solid var(--line);padding:14px 0}
+.migration-faq summary{font-weight:800;color:var(--moss);font-size:13px;cursor:pointer}
+.migration-faq details p{margin:10px 0 0;line-height:1.7;font-size:13px;color:#4a6252}
+.migration-base-note,.migration-extra-note{margin:0;padding:17px 19px}
+@media(max-width:600px){.migration-compare-item .compare-title{flex-direction:column;gap:2px}.migration-compare-item .compare-title b{white-space:normal}}

@@ -32,10 +32,11 @@ def pick_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     return ImageFont.load_default()
 
 
-def stamp_image(original: Image.Image) -> Image.Image:
+def stamp_image(original: Image.Image, prominent: bool = False) -> Image.Image:
     base = original.convert("RGBA")
     width, height = base.size
-    font_size = max(16, min(56, round(min(width, height) * 0.046)))
+    font_size = (max(25, min(86, round(min(width, height) * 0.088))) if prominent
+                 else max(16, min(56, round(min(width, height) * 0.046))))
     font = pick_font(font_size)
     dummy = ImageDraw.Draw(Image.new("RGBA", (1, 1)))
     bounds = dummy.textbbox((0, 0), LABEL, font=font, stroke_width=1)
@@ -44,13 +45,13 @@ def stamp_image(original: Image.Image) -> Image.Image:
     tile = Image.new("RGBA", (text_w + 36, text_h + 37), (0, 0, 0, 0))
     td = ImageDraw.Draw(tile)
     td.text((18 - bounds[0], 14 - bounds[1]), LABEL, font=font,
-            fill=(248, 247, 242, 42), stroke_width=1,
-            stroke_fill=(21, 27, 28, 25))
+            fill=((21, 27, 28, 88) if prominent else (248, 247, 242, 42)), stroke_width=1,
+            stroke_fill=((248, 247, 242, 115) if prominent else (21, 27, 28, 25)))
     tilted = tile.rotate(22, expand=True, resample=Image.Resampling.BICUBIC)
 
     overlay = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-    step_x = max(int(tilted.width * 1.5), 145)
-    step_y = max(int(tilted.height * 1.65), 110)
+    step_x = max(int(tilted.width * (1.9 if prominent else 1.5)), 145)
+    step_y = max(int(tilted.height * (2.0 if prominent else 1.65)), 110)
     # Subtle repeated diagonal marks that preserve readable dashboard data.
     for row, y in enumerate(range(0, height, step_y)):
         start_x = -(step_x // 3) if row % 2 else 0
@@ -93,7 +94,7 @@ def process_root(site_assets: Path) -> tuple[int, int]:
                 skipped += 1
                 continue
             with Image.open(path) as im:
-                marked = stamp_image(im)
+                marked = stamp_image(im, prominent=rel.startswith("results/"))
                 if path.suffix.lower() == ".webp":
                     marked.convert("RGB").save(path, format="WEBP", quality=90, method=6)
                 elif path.suffix.lower() in {".jpg", ".jpeg"}:

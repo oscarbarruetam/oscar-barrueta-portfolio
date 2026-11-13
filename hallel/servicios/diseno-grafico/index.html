@@ -56,20 +56,19 @@ h2{font-size:clamp(35px,4.7vw,62px);margin:14px 0 0}.section-head p{max-width:42
 @media(max-width:670px){.shell{width:calc(100% - 34px)}.topbar{min-height:67px}.brand img{width:133px}.topnav{display:none}.nav-cta{display:none}.hero{padding:40px 0 72px}.hero .eyebrow{margin-top:43px}.section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:16px}.categories{grid-template-columns:1fr}.category{padding:24px}.addon{padding:25px}.addon .addon-price{white-space:normal}.cta{padding:75px 0}.cta .shell{display:block}.cta .btn{margin-top:18px}.footer-row{flex-wrap:wrap}.actions .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-/* Portfolio samples: documented creative work, not fabricated metrics */
-.samples-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.sample-card{margin:0;min-width:0;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
-.sample-image{display:grid;place-items:center;background:linear-gradient(145deg,#e5eae3,#f5f4ee);padding:20px;min-height:400px;position:relative;overflow:hidden}
-.sample-image img{display:block;width:100%;height:385px;object-fit:contain;transition:transform .22s ease;filter:drop-shadow(0 8px 14px #233b3017)}
-.sample-image:hover img,.sample-image:focus-visible img{transform:scale(1.025)}
-.sample-image .view-icon{position:absolute;right:18px;bottom:17px;background:var(--ink);color:var(--paper);border-radius:7px;font-weight:800;font-size:12px;padding:10px 13px}
-.sample-copy{padding:26px 27px 29px}
-.sample-index{font-size:11px;font-weight:850;letter-spacing:.13em;color:var(--moss)}
-.sample-copy h3{font-size:25px;margin:12px 0}
-.sample-copy p{font-size:14px;color:var(--sub);margin:0;max-width:470px}
-.sample-provenance{font-size:12px;line-height:1.65;color:var(--sub);max-width:920px;margin:25px 0 0;padding-left:16px;border-left:3px solid var(--moss)}
-@media(max-width:750px){.samples-grid{grid-template-columns:1fr}.sample-image{min-height:335px}.sample-image img{height:325px}.sample-copy{padding:23px}.sample-copy h3{font-size:22px}}
-@media(prefers-reduced-motion:reduce){.sample-image img{transition:none}}
+/* Ejemplos del PDF entregado: mismos colores, tarjetas y espaciado de esta página */
+.design-examples{margin-top:52px;padding-top:42px;border-top:1px solid var(--line)}
+.design-examples>h3{font-size:clamp(27px,3vw,37px);margin:13px 0 25px}
+.design-group{min-width:0}
+.design-group h3{margin:12px 0 5px}
+.design-images{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.design-images.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.design-images a{display:block;min-width:0;background:#f5f7f3;border:1px solid var(--line);border-radius:8px;overflow:hidden;transition:border-color .18s}
+.design-images a:hover{border-color:var(--moss)}
+.design-images img{display:block;width:100%;height:220px;object-fit:contain;padding:6px}
+.design-caption{margin:18px 0 0!important;font-size:12px!important;line-height:1.65;color:var(--sub)}
+@media(max-width:670px){.design-examples{margin-top:34px;padding-top:33px}.design-images img{height:180px}.design-images{gap:8px}}
+@media(max-width:420px){.design-images img{height:145px}}
 
 </style>
 </head>
@@ -91,33 +90,26 @@ h2{font-size:clamp(35px,4.7vw,62px);margin:14px 0 0}.section-head p{max-width:42
 <article class="category"><small>02 / EMAIL</small><h3><span data-es="Diseño para email" data-en="Email creative">Diseño para email</span></h3><p><span data-es="Piezas visuales para campañas, promociones y comunicaciones de retención." data-en="Visual assets for campaigns, promotions and retention communications.">Piezas visuales para campañas, promociones y comunicaciones de retención.</span></p></article>
 <article class="category"><small>03 / ECOMMERCE</small><h3><span data-es="Creativos para Shopify" data-en="Storefront assets">Creativos para Shopify</span></h3><p><span data-es="Banners de homepage, colecciones, promociones y recursos visuales de producto." data-en="Homepage, collection and promotion banners plus visual product assets.">Banners de homepage, colecciones, promociones y recursos visuales de producto.</span></p></article>
 <article class="category"><small>04 / SOCIAL</small><h3><span data-es="Contenido gráfico para redes" data-en="Social design">Contenido gráfico para redes</span></h3><p><span data-es="Piezas comerciales para comunicación orgánica, lanzamientos y fechas especiales." data-en="Commercial assets for organic communications, launches and key dates.">Piezas comerciales para comunicación orgánica, lanzamientos y fechas especiales.</span></p></article>
-</div></div></section>
-
-<section class="section" id="portafolio"><div class="shell">
- <div class="section-head"><div><span class="eyebrow"><span data-es="PORTAFOLIO / TRABAJO VISUAL" data-en="PORTFOLIO / CREATIVE WORK">PORTAFOLIO / TRABAJO VISUAL</span></span>
-  <h2><span data-es="El diseño se demuestra con piezas." data-en="Design speaks through the work.">El diseño se demuestra con piezas.</span></h2></div>
-  <p><span data-es="Muestras reales de diseño digital realizadas por una diseñadora colaboradora. Toca cualquier imagen para verla completa." data-en="Authentic digital design samples made by a collaborating designer. Open any image to view it in full.">Muestras reales de diseño digital realizadas por una diseñadora colaboradora. Toca cualquier imagen para verla completa.</span></p></div>
- <div class="samples-grid">
-  <figure class="sample-card">
-   <a class="sample-image" href="../../assets/design/yanin-newsletter.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar muestra de newsletter para ecommerce">
-    <img loading="lazy" decoding="async" src="../../assets/design/yanin-newsletter.webp" width="425" height="800" alt="Newsletter editorial de moda sostenible con bloques de productos y fotografías, muestra del portafolio de la diseñadora">
-    <span class="view-icon"><span data-es="Ampliar ↗" data-en="View larger ↗">Ampliar ↗</span></span></a>
-   <figcaption class="sample-copy"><span class="sample-index">01 / EMAIL MARKETING</span>
-    <h3><span data-es="Newsletter y diseño de email" data-en="Newsletter and email design">Newsletter y diseño de email</span></h3>
-    <p><span data-es="Composición visual de newsletter: jerarquía editorial, fotografía de producto y narrativa comercial." data-en="Newsletter layout with editorial hierarchy, product photography and commercial storytelling.">Composición visual de newsletter: jerarquía editorial, fotografía de producto y narrativa comercial.</span></p></figcaption>
-  </figure>
-  <figure class="sample-card">
-   <a class="sample-image" href="../../assets/design/yanin-social.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar muestra de creatividad para redes sociales">
-    <img loading="lazy" decoding="async" src="../../assets/design/yanin-social.webp" width="420" height="800" alt="Creatividad de lanzamiento de moda para publicación de Instagram, muestra del portafolio de la diseñadora">
-    <span class="view-icon"><span data-es="Ampliar ↗" data-en="View larger ↗">Ampliar ↗</span></span></a>
-   <figcaption class="sample-copy"><span class="sample-index">02 / SOCIAL CREATIVE</span>
-    <h3><span data-es="Creatividad para redes sociales" data-en="Social media creative">Creatividad para redes sociales</span></h3>
-    <p><span data-es="Diseño para comunicar una nueva colección, adaptado al contexto visual de una publicación social." data-en="Creative work announcing a new collection in the context of a social media post.">Diseño para comunicar una nueva colección, adaptado al contexto visual de una publicación social.</span></p></figcaption>
-  </figure>
- </div>
- <p class="sample-provenance"><span data-es="Estas piezas proceden del portafolio previo de una diseñadora colaboradora. Se muestran como ejemplos de capacidad creativa; no se presentan como trabajos realizados bajo HALLEL ni como casos de crecimiento o ventas." data-en="These pieces come from a collaborating designer’s prior portfolio. They illustrate creative skills and are not represented as work delivered under HALLEL or as evidence of sales or growth.">Estas piezas proceden del portafolio previo de una diseñadora colaboradora. Se muestran como ejemplos de capacidad creativa; no se presentan como trabajos realizados bajo HALLEL ni como casos de crecimiento o ventas.</span></p>
-</div></section>
-
+</div><div class="design-examples" id="ejemplos"><span class="eyebrow"><span data-es="EJEMPLOS DE DISEÑO" data-en="DESIGN EXAMPLES">EJEMPLOS DE DISEÑO</span></span><h3><span data-es="Trabajos seleccionados." data-en="Selected work.">Trabajos seleccionados.</span></h3><div class="categories">
+<article class="category design-group"><small>01 / EMAIL MARKETING</small><h3>Olivers Gut</h3><div class="design-images two">
+<a href="../../assets/design/yanin-pdf/olivers-gut-email-01.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Olivers Gut 1"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/olivers-gut-email-01.webp" alt="Diseño de newsletter de Olivers Gut, contenido editorial sobre bienestar digestivo"></a>
+<a href="../../assets/design/yanin-pdf/olivers-gut-email-02.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Olivers Gut 2"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/olivers-gut-email-02.webp" alt="Pieza de email Olivers Gut con producto y mensaje promocional"></a>
+</div></article>
+<article class="category design-group"><small>02 / BANNERS</small><h3>Afflelou</h3><div class="design-images two">
+<a href="../../assets/design/yanin-pdf/afflelou-banner-01.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Afflelou 1"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/afflelou-banner-01.webp" alt="Diseño de campaña Afflelou con anteojos, fondo azul y composición creativa"></a>
+<a href="../../assets/design/yanin-pdf/afflelou-banner-02.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Afflelou 2"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/afflelou-banner-02.webp" alt="Segundo diseño de banner Afflelou con lentes, tecnología y recursos gráficos"></a>
+</div></article>
+<article class="category design-group"><small>03 / EMAIL MARKETING</small><h3>Skunk Socks</h3><div class="design-images">
+<a href="../../assets/design/yanin-pdf/skunk-socks-email-01.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Skunk Socks 1"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/skunk-socks-email-01.webp" alt="Promoción Skunk Socks con descuento por compra y calcetines ilustrados"></a>
+<a href="../../assets/design/yanin-pdf/skunk-socks-email-02.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Skunk Socks 2"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/skunk-socks-email-02.webp" alt="Promoción Skunk Socks con ofertas escalonadas según cantidad de pares"></a>
+<a href="../../assets/design/yanin-pdf/skunk-socks-email-03.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Skunk Socks 3"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/skunk-socks-email-03.webp" alt="Promoción Skunk Socks con descuento del 40 por ciento"></a>
+</div></article>
+<article class="category design-group"><small>04 / BANNERS</small><h3>Banners varios</h3><div class="design-images">
+<a href="../../assets/design/yanin-pdf/varios-banner-datagri.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Banners varios 1"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/varios-banner-datagri.webp" alt="Diseño gráfico de DATAGRI sobre agricultura y tecnología"></a>
+<a href="../../assets/design/yanin-pdf/varios-banner-bbva-01.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Banners varios 2"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/varios-banner-bbva-01.webp" alt="Banner BBVA con persona sentada en cajas, campaña creativa"></a>
+<a href="../../assets/design/yanin-pdf/varios-banner-bbva-02.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar imagen de Banners varios 3"><img loading="lazy" decoding="async" src="../../assets/design/yanin-pdf/varios-banner-bbva-02.webp" alt="Banner BBVA con mujer creativa y fondo azul"></a>
+</div></article>
+</div><p class="design-caption"><span data-es="Piezas extraídas del portafolio proporcionado de Yanin Vega. Puedes abrir cada imagen para verla completa; no se presentan como proyectos realizados por HALLEL." data-en="Pieces extracted from the supplied Yanin Vega portfolio. Open each image to view it in full; they are not presented as work delivered by HALLEL.">Piezas extraídas del portafolio proporcionado de Yanin Vega. Puedes abrir cada imagen para verla completa; no se presentan como proyectos realizados por HALLEL.</span></p></div></div></section>
 <section class="section soft" id="planes"><div class="shell"><div class="section-head"><div><span class="eyebrow">HALLEL CREATIVE</span><h2><span data-es="Planes de diseño." data-en="Design plans.">Planes de diseño.</span></h2></div><p><span data-es="Volumen mensual predefinido de piezas. La distribución entre canales y formatos se establece de acuerdo con el brief." data-en="Defined monthly asset volume. Allocation across channels and formats is established through the creative brief.">Volumen mensual predefinido de piezas. La distribución entre canales y formatos se establece de acuerdo con el brief.</span></p></div>
 <div class="plans">
 <article class="plan"><span class="plan-label">01 / ESSENTIALS</span><h3>Creative Essentials</h3><div class="plan-price">US$650 <small><span data-es="/ mes" data-en="/ month">/ mes</span></small></div><div class="plan-mxn">≈ $12,253 MXN / mes*</div><div class="unit">8 <span data-es="unidades de diseño / mes" data-en="design units / month">unidades de diseño / mes</span></div><p><span data-es="Para tiendas que necesitan una base constante de creativos comerciales." data-en="For stores that need a steady foundation of commercial creative assets.">Para tiendas que necesitan una base constante de creativos comerciales.</span></p><a class="btn btn-signal" href="../../agendar/?servicio=Dise%C3%B1o%20Gr%C3%A1fico&subservicio=Creative%20Essentials"><span data-es="Consultar el plan" data-en="Discuss this plan">Consultar el plan</span> ↗</a></article>

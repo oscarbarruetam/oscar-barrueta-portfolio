@@ -15,27 +15,11 @@ from PIL import Image, ImageDraw, ImageFont
 SITE_ROOTS = (Path("assets"), Path("hallel/assets"))
 IMAGE_FOLDERS = ("design", "examples", "evidence", "results", "sites")
 EXTENSIONS = {".webp", ".png", ".jpg", ".jpeg"}
-LABEL = "HALLEL · MUESTRA"
+LABEL = "HALLEL"
 FONT_CANDIDATES = (
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
 )
-
-# These ten gallery images were already permanently watermarked before
-# this automation was added. Register their first-seen hashes as protected.
-SEED_PROTECTED = {
-    "design/galeria/banner-01.webp",
-    "design/galeria/banner-02.webp",
-    "design/galeria/email-01.webp",
-    "design/galeria/email-02.webp",
-    "design/galeria/ecommerce-01.webp",
-    "design/galeria/ecommerce-02.webp",
-    "design/galeria/ecommerce-03.webp",
-    "design/galeria/digital-01.webp",
-    "design/galeria/digital-02.webp",
-    "design/galeria/digital-03.webp",
-}
-
 
 def hash_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -51,7 +35,7 @@ def pick_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
 def stamp_image(original: Image.Image) -> Image.Image:
     base = original.convert("RGBA")
     width, height = base.size
-    font_size = max(19, min(84, round(min(width, height) * 0.075)))
+    font_size = max(16, min(56, round(min(width, height) * 0.046)))
     font = pick_font(font_size)
     dummy = ImageDraw.Draw(Image.new("RGBA", (1, 1)))
     bounds = dummy.textbbox((0, 0), LABEL, font=font, stroke_width=1)
@@ -60,14 +44,14 @@ def stamp_image(original: Image.Image) -> Image.Image:
     tile = Image.new("RGBA", (text_w + 36, text_h + 37), (0, 0, 0, 0))
     td = ImageDraw.Draw(tile)
     td.text((18 - bounds[0], 14 - bounds[1]), LABEL, font=font,
-            fill=(247, 247, 242, 78), stroke_width=1,
-            stroke_fill=(21, 27, 28, 58))
+            fill=(248, 247, 242, 42), stroke_width=1,
+            stroke_fill=(21, 27, 28, 25))
     tilted = tile.rotate(22, expand=True, resample=Image.Resampling.BICUBIC)
 
     overlay = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-    step_x = max(int(tilted.width * 0.92), 110)
-    step_y = max(int(tilted.height * 1.22), 90)
-    # Sparse repeated diagonal marks across the entire image.
+    step_x = max(int(tilted.width * 1.5), 145)
+    step_y = max(int(tilted.height * 1.65), 110)
+    # Subtle repeated diagonal marks that preserve readable dashboard data.
     for row, y in enumerate(range(0, height, step_y)):
         start_x = -(step_x // 3) if row % 2 else 0
         for x in range(start_x, width, step_x):
@@ -79,19 +63,6 @@ def stamp_image(original: Image.Image) -> Image.Image:
             section = tilted.crop((left - x, top - y, right - x, bottom - y))
             overlay.alpha_composite(section, (left, top))
 
-    # A small central watermark remains visible even if the edges are cropped.
-    badge_font = pick_font(max(20, min(72, round(min(width, height) * 0.1))))
-    bd = ImageDraw.Draw(overlay)
-    b = bd.textbbox((0, 0), "HALLEL", font=badge_font)
-    bw, bh = b[2] - b[0], b[3] - b[1]
-    cx, cy = width // 2, height // 2
-    pad_x, pad_y = max(9, bw // 12), max(6, bh // 6)
-    bd.rounded_rectangle((cx - bw // 2 - pad_x, cy - bh // 2 - pad_y,
-                          cx + bw // 2 + pad_x, cy + bh // 2 + pad_y),
-                         radius=max(8, min(width, height) // 45),
-                         fill=(21, 27, 28, 67))
-    bd.text((cx - bw // 2 - b[0], cy - bh // 2 - b[1]),
-            "HALLEL", font=badge_font, fill=(248, 247, 242, 148))
     return Image.alpha_composite(base, overlay)
 
 
@@ -121,11 +92,6 @@ def process_root(site_assets: Path) -> tuple[int, int]:
             if recorded.get(rel) == before_sha:
                 skipped += 1
                 continue
-            if rel in SEED_PROTECTED and rel not in recorded:
-                recorded[rel] = before_sha
-                skipped += 1
-                continue
-
             with Image.open(path) as im:
                 marked = stamp_image(im)
                 if path.suffix.lower() == ".webp":

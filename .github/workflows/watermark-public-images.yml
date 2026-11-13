@@ -1,0 +1,45 @@
+name: Watermark public portfolio images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/**'
+      - 'hallel/assets/**'
+      - 'scripts/watermark_public_assets.py'
+      - '.github/workflows/watermark-public-images.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: watermark-public-images
+  cancel-in-progress: false
+
+jobs:
+  watermark:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image support
+        run: python -m pip install "Pillow>=10,<13"
+      - name: Embed watermarks into publishable images
+        run: python scripts/watermark_public_assets.py
+      - name: Commit protected assets
+        shell: bash
+        run: |
+          if ! git diff --quiet; then
+            git config user.name "hallel-image-protection[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets hallel/assets 2>/dev/null || true
+            git commit -m "assets: watermark public portfolio imagery [skip ci]"
+            git push
+          fi

@@ -12,7 +12,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-SITE_ROOTS = (Path("assets"), Path("hallel/assets"))
+SITE_ROOTS = (Path("hallel/assets"),) if Path("hallel/assets").is_dir() else (Path("assets"),)
 IMAGE_FOLDERS = ("design", "examples", "evidence", "results", "sites")
 EXTENSIONS = {".webp", ".png", ".jpg", ".jpeg"}
 LABEL = "HALLEL"

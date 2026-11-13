@@ -55,6 +55,22 @@ h2{font-size:clamp(35px,4.7vw,62px);margin:14px 0 0}.section-head p{max-width:42
 @media(max-width:900px){.plans{grid-template-columns:1fr}.plan{min-height:0}.steps{grid-template-columns:1fr}.addon{flex-wrap:wrap}}
 @media(max-width:670px){.shell{width:calc(100% - 34px)}.topbar{min-height:67px}.brand img{width:133px}.topnav{display:none}.nav-cta{display:none}.hero{padding:40px 0 72px}.hero .eyebrow{margin-top:43px}.section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:16px}.categories{grid-template-columns:1fr}.category{padding:24px}.addon{padding:25px}.addon .addon-price{white-space:normal}.cta{padding:75px 0}.cta .shell{display:block}.cta .btn{margin-top:18px}.footer-row{flex-wrap:wrap}.actions .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Portfolio samples: documented creative work, not fabricated metrics */
+.samples-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.sample-card{margin:0;min-width:0;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.sample-image{display:grid;place-items:center;background:linear-gradient(145deg,#e5eae3,#f5f4ee);padding:20px;min-height:400px;position:relative;overflow:hidden}
+.sample-image img{display:block;width:100%;height:385px;object-fit:contain;transition:transform .22s ease;filter:drop-shadow(0 8px 14px #233b3017)}
+.sample-image:hover img,.sample-image:focus-visible img{transform:scale(1.025)}
+.sample-image .view-icon{position:absolute;right:18px;bottom:17px;background:var(--ink);color:var(--paper);border-radius:7px;font-weight:800;font-size:12px;padding:10px 13px}
+.sample-copy{padding:26px 27px 29px}
+.sample-index{font-size:11px;font-weight:850;letter-spacing:.13em;color:var(--moss)}
+.sample-copy h3{font-size:25px;margin:12px 0}
+.sample-copy p{font-size:14px;color:var(--sub);margin:0;max-width:470px}
+.sample-provenance{font-size:12px;line-height:1.65;color:var(--sub);max-width:920px;margin:25px 0 0;padding-left:16px;border-left:3px solid var(--moss)}
+@media(max-width:750px){.samples-grid{grid-template-columns:1fr}.sample-image{min-height:335px}.sample-image img{height:325px}.sample-copy{padding:23px}.sample-copy h3{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.sample-image img{transition:none}}
+
 </style>
 </head>
 <body>
@@ -76,6 +92,32 @@ h2{font-size:clamp(35px,4.7vw,62px);margin:14px 0 0}.section-head p{max-width:42
 <article class="category"><small>03 / ECOMMERCE</small><h3><span data-es="Creativos para Shopify" data-en="Storefront assets">Creativos para Shopify</span></h3><p><span data-es="Banners de homepage, colecciones, promociones y recursos visuales de producto." data-en="Homepage, collection and promotion banners plus visual product assets.">Banners de homepage, colecciones, promociones y recursos visuales de producto.</span></p></article>
 <article class="category"><small>04 / SOCIAL</small><h3><span data-es="Contenido gráfico para redes" data-en="Social design">Contenido gráfico para redes</span></h3><p><span data-es="Piezas comerciales para comunicación orgánica, lanzamientos y fechas especiales." data-en="Commercial assets for organic communications, launches and key dates.">Piezas comerciales para comunicación orgánica, lanzamientos y fechas especiales.</span></p></article>
 </div></div></section>
+
+<section class="section" id="portafolio"><div class="shell">
+ <div class="section-head"><div><span class="eyebrow"><span data-es="PORTAFOLIO / TRABAJO VISUAL" data-en="PORTFOLIO / CREATIVE WORK">PORTAFOLIO / TRABAJO VISUAL</span></span>
+  <h2><span data-es="El diseño se demuestra con piezas." data-en="Design speaks through the work.">El diseño se demuestra con piezas.</span></h2></div>
+  <p><span data-es="Muestras reales de diseño digital realizadas por una diseñadora colaboradora. Toca cualquier imagen para verla completa." data-en="Authentic digital design samples made by a collaborating designer. Open any image to view it in full.">Muestras reales de diseño digital realizadas por una diseñadora colaboradora. Toca cualquier imagen para verla completa.</span></p></div>
+ <div class="samples-grid">
+  <figure class="sample-card">
+   <a class="sample-image" href="../../assets/design/yanin-newsletter.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar muestra de newsletter para ecommerce">
+    <img loading="lazy" decoding="async" src="../../assets/design/yanin-newsletter.webp" width="425" height="800" alt="Newsletter editorial de moda sostenible con bloques de productos y fotografías, muestra del portafolio de la diseñadora">
+    <span class="view-icon"><span data-es="Ampliar ↗" data-en="View larger ↗">Ampliar ↗</span></span></a>
+   <figcaption class="sample-copy"><span class="sample-index">01 / EMAIL MARKETING</span>
+    <h3><span data-es="Newsletter y diseño de email" data-en="Newsletter and email design">Newsletter y diseño de email</span></h3>
+    <p><span data-es="Composición visual de newsletter: jerarquía editorial, fotografía de producto y narrativa comercial." data-en="Newsletter layout with editorial hierarchy, product photography and commercial storytelling.">Composición visual de newsletter: jerarquía editorial, fotografía de producto y narrativa comercial.</span></p></figcaption>
+  </figure>
+  <figure class="sample-card">
+   <a class="sample-image" href="../../assets/design/yanin-social.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar muestra de creatividad para redes sociales">
+    <img loading="lazy" decoding="async" src="../../assets/design/yanin-social.webp" width="420" height="800" alt="Creatividad de lanzamiento de moda para publicación de Instagram, muestra del portafolio de la diseñadora">
+    <span class="view-icon"><span data-es="Ampliar ↗" data-en="View larger ↗">Ampliar ↗</span></span></a>
+   <figcaption class="sample-copy"><span class="sample-index">02 / SOCIAL CREATIVE</span>
+    <h3><span data-es="Creatividad para redes sociales" data-en="Social media creative">Creatividad para redes sociales</span></h3>
+    <p><span data-es="Diseño para comunicar una nueva colección, adaptado al contexto visual de una publicación social." data-en="Creative work announcing a new collection in the context of a social media post.">Diseño para comunicar una nueva colección, adaptado al contexto visual de una publicación social.</span></p></figcaption>
+  </figure>
+ </div>
+ <p class="sample-provenance"><span data-es="Estas piezas proceden del portafolio previo de una diseñadora colaboradora. Se muestran como ejemplos de capacidad creativa; no se presentan como trabajos realizados bajo HALLEL ni como casos de crecimiento o ventas." data-en="These pieces come from a collaborating designer’s prior portfolio. They illustrate creative skills and are not represented as work delivered under HALLEL or as evidence of sales or growth.">Estas piezas proceden del portafolio previo de una diseñadora colaboradora. Se muestran como ejemplos de capacidad creativa; no se presentan como trabajos realizados bajo HALLEL ni como casos de crecimiento o ventas.</span></p>
+</div></section>
+
 <section class="section soft" id="planes"><div class="shell"><div class="section-head"><div><span class="eyebrow">HALLEL CREATIVE</span><h2><span data-es="Planes de diseño." data-en="Design plans.">Planes de diseño.</span></h2></div><p><span data-es="Volumen mensual predefinido de piezas. La distribución entre canales y formatos se establece de acuerdo con el brief." data-en="Defined monthly asset volume. Allocation across channels and formats is established through the creative brief.">Volumen mensual predefinido de piezas. La distribución entre canales y formatos se establece de acuerdo con el brief.</span></p></div>
 <div class="plans">
 <article class="plan"><span class="plan-label">01 / ESSENTIALS</span><h3>Creative Essentials</h3><div class="plan-price">US$650 <small><span data-es="/ mes" data-en="/ month">/ mes</span></small></div><div class="plan-mxn">≈ $12,253 MXN / mes*</div><div class="unit">8 <span data-es="unidades de diseño / mes" data-en="design units / month">unidades de diseño / mes</span></div><p><span data-es="Para tiendas que necesitan una base constante de creativos comerciales." data-en="For stores that need a steady foundation of commercial creative assets.">Para tiendas que necesitan una base constante de creativos comerciales.</span></p><a class="btn btn-signal" href="../../agendar/?servicio=Dise%C3%B1o%20Gr%C3%A1fico&subservicio=Creative%20Essentials"><span data-es="Consultar el plan" data-en="Discuss this plan">Consultar el plan</span> ↗</a></article>

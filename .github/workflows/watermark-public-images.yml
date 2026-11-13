@@ -36,10 +36,11 @@ jobs:
       - name: Commit protected assets
         shell: bash
         run: |
-          if ! git diff --quiet; then
+          git add -A assets 2>/dev/null || true
+          git add -A hallel/assets 2>/dev/null || true
+          if ! git diff --cached --quiet; then
             git config user.name "hallel-image-protection[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add assets hallel/assets 2>/dev/null || true
             git commit -m "assets: watermark public portfolio imagery [skip ci]"
             git push
           fi
